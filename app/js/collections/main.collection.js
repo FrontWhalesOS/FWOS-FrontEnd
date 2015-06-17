@@ -4,7 +4,7 @@
 
   app.Collections.Contacts = Backbone.Collection.extend({
 
-    model: apps.Models.User,
+    model: app.Models.User,
 
     comparator: 'lastName',
 
