@@ -13,6 +13,8 @@
 
     },
 
+    template: hbs.main
+
   });
 
 }());
