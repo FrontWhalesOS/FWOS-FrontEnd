@@ -4,11 +4,11 @@
 
   app.Views.Main = Backbone.View.extend({
 
-    className = "main",
+    className: "main",
 
     events: {
 
-      "submit #login-form" : "loginUser"
+      "submit #login-form" : "loginUser",
       "submit #register-form" : "registerUser"
 
     },
