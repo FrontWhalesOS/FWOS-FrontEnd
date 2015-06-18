@@ -19,7 +19,7 @@ body {
   display: block;
   height: 54px;
   text-align: center;
-  border-top: solid 4px #C61F1F; }
+  border-top: solid 4px #F04124; }
   .navBar .linkWraps {
     height: 40px;
     margin: 0 auto; }
@@ -45,9 +45,48 @@ body {
     width: 10%;
     background-color: #515151;
     padding: 40px 0 29px 0;
-    border: solid 3px #C61F1F;
+    border: solid 3px #F04124;
     margin-top: -74px;
     border-radius: 50%;
     color: white;
     font-size: 2.0em;
     text-shadow: 1px 1px 9px #000101; }
+
+.front {
+  color: #FFFFFF;
+  text-shadow: 1px 1px 3px #000101;
+  border: solid 2px #F04124;
+  margin-top: 5em;
+  border-radius: 8px;
+  overflow: hidden; }
+  .front h3 {
+    color: #FFFFFF;
+    background-color: #9C9D9D;
+    width: 100%;
+    padding: 0.6em 0 0.6em 1em;
+    margin: 0;
+    display: block;
+    clear: both; }
+  .front .loginWrap {
+    height: 225px; }
+  .front form {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    height: auto; }
+  .front .inputWrap {
+    display: block; }
+  .front .connectInput {
+    display: inline-block; }
+  .front p {
+    text-align: right;
+    line-height: 2em; }
+  .front input {
+    width: 65%;
+    background-color: #DBDCDE;
+    border-radius: 4px; }
+  .front .pwError {
+    height: 50px;
+    text-align: right;
+    padding-right: 10px; }
+  .front button {
+    border-radius: 4px; }
