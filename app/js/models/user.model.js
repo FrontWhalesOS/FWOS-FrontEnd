@@ -4,7 +4,7 @@
 
   app.Models.User = Backbone.Model.extend({
 
-    idAttribute: "_id", // in case of MongoDB syntax
+    idAttribute: "id", // in case of MongoDB syntax
 
     defaults: {
 
