@@ -197,7 +197,7 @@ body{
   @include outer-container();
 
   .mainPics {
-    @include span-columns(7.4);
+    @include span-columns(8.6);
     color: $pureWhite;
     text-shadow: 1px 1px 3px $hoverBlack;
     border: solid 2px $headBorderRed;
@@ -205,7 +205,7 @@ body{
     border-radius: 8px;
     overflow: hidden;
     height: 60em; //delete later;
-    clear:both;
+    clear: both;
     float: left;
 
     h3 {
