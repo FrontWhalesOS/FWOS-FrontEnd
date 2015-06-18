@@ -2,7 +2,7 @@
 
   'use strict';
 
-  app.Collections.Contacts = Backbone.Collection.extend({
+  app.Collections.Users = Backbone.Collection.extend({
 
     model: app.Models.User,
 

@@ -5,7 +5,9 @@ $navGray: #515151;
 $navBlack: #333333;
 $hoverBlack: #000101;
 $pureWhite: #FFFFFF;
-$headBorderRed: #C61F1F;
+$headBorderRed: #F04124;
+$ltGray: #DBDCDE;
+$midGray: #9C9D9D;
 
 @mixin navLink() {
   color: $pureWhite;
@@ -25,7 +27,10 @@ body{
   background-color: $navGray;
 }
 
+//
 // navigation bar styling
+//
+
 .navBar {
   padding-left: 5.7em;
   width: 100%;
@@ -67,4 +72,71 @@ body{
     font-size: 2.0em;
     text-shadow: 1px 1px 9px $hoverBlack;
   }
+}
+
+//
+// end nav
+//
+
+
+
+//
+// main.hbs template styling -- login and register divs
+//
+
+.front {
+  color: $pureWhite;
+  text-shadow: 1px 1px 3px $hoverBlack;
+  border: solid 2px $headBorderRed;
+  margin-top: 5em;
+  border-radius: 8px;
+  overflow: hidden;
+
+  h3 {
+    color: $pureWhite;
+    background-color: $midGray;
+    width: 100%;
+    padding: 0.6em 0 0.6em 1em;
+    margin: 0;
+    display: block;
+    clear:both;
+  }
+  .loginWrap {
+    height: 225px;
+  }
+
+  form {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    height:auto;
+  }
+
+  .inputWrap {
+    display: block;
+  }
+
+  .connectInput {
+    display: inline-block;
+  }
+
+  p {
+    text-align: right;
+    line-height: 2em;
+  }
+  input {
+    width: 65%;
+    background-color: $ltGray;
+    border-radius: 4px;
+  }
+
+  .pwError {
+    height: 50px;
+    text-align: right;
+    padding-right: 10px;
+  }
+
+  button {
+    border-radius: 4px;
+  }
+
 }

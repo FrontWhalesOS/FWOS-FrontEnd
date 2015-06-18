@@ -1,31 +1,46 @@
-<section class="loginForm">
-  <h3>Log In</h3>
-  <form>
-    <p>Username:</p>
-    <input type="text" id="login-user">
-    <p>Password:</p>
-    <input type="text" id="login-pwd">
-    <button>Login</button>
-  </form>
-</section>
+
+<main class = "front row">
+
+  <h3 class = "loginHead">Log In</h3>
+
+  <div class="small-8 columns loginWrap">
+
+    <section>
+      <form>
+        <div class="inputWrap row"><p class="connectInput small-4 columns">Username:</p>
+        <input type="text" id="login-user" class="connectInput"></div>
+        <div class="inputWrap row"><p class="connectInput small-4 columns">Password:</p>
+        <input type="password" id="login-pwd" class="connectInput"></div>
+
+        <button class="alert">Login</button>
+      </form>
+    </section>
+  </div>
 
 
-<section class="newUser">
-  <h3>New User</h3>
-  <form>
-    <p>Name:</p>
-    <input type="text" id="new-name">
-    <p>Email:</p>
-    <input type="text" id="new-email">
-    <p>Username:</p>
-    <input type="text" id="new-username">
-    <p>Password:</p>
-    <input type="text" id="new-pwd">
-    <input type="text" id="ver-pwd">
+  <h3 class = "regHead">New User</h3>
 
-    <div class='pwError'></div>
+  <div class="small-8 columns newUserWrap">
 
-    <button>Sign Me Up</button>
+    <section>
+      <form>
+        <div class="inputWrap row"><p class="connectInput small-4 columns">Name:</p>
+        <input type="text" id="new-name" class="connectInput"></div>
+        <div class="inputWrap row"><p class="connectInput small-4 columns">Email:</p>
+        <input type="text" id="new-email" class="connectInput"></div>
+        <div class="inputWrap row"><p class="connectInput small-4 columns">Username:</p>
+        <input type="password" id="new-username" class="connectInput"></div>
+        <div class="inputWrap row"><p class="connectInput small-4 columns">Password:</p>
+        <input type="password" id="new-pwd" class="connectInput"></div>
+        <div class="inputWrap row"><p class="connectInput small-4 columns">Confirm Password:</p>
+        <input type="text" id="ver-pwd" class="connectInput"></div>
 
-  </form>
-</section>
+        <div class='pwError row'></div>
+
+        <button class="alert">Sign&nbsp;Me&nbsp;Up</button>
+
+      </form>
+
+    </section>
+  </div>
+</main>
