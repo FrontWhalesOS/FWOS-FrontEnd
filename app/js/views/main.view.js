@@ -75,7 +75,8 @@
      //add instance to collection and push to database
      this.collection.add(u)
 
-     $.post('http://tiy-515.herokuapp.com/collections/nicktest', u.toJSON()).success( function (data) {
+     $.post('https://morning-sands-1943.herokuapp.com/users/register', u.toJSON()).success( function (data) {
+
       Cookies.set('access_token', data.access_token);
       Cookies.set('user_name', data.user_name);
       self.render();
