@@ -1,4 +1,8 @@
 this["hbs"] = this["hbs"] || {};
+this["hbs"]["about"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "<h3>About Page</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n";
+},"useData":true});
+this["hbs"] = this["hbs"] || {};
 this["hbs"]["dashboard"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var helper;
 
@@ -17,9 +21,9 @@ this["hbs"]["dashboard"] = Handlebars.template({"1":function(depth0,helpers,part
     var stack1;
 
   return "<ul class=\"main-pics\">\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0['??'] : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.user : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</ul>\n\n\n<table class=\"score-dash\">\n  <thead>\n    <tr>\n      <th width=\"200\">Player</th>\n      <th width=\"150\">Score</th>\n    </tr>\n  </thead>\n  <tbody>\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0['??'] : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.user : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "  </tbody>\n</table>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
@@ -32,11 +36,15 @@ this["hbs"]["example"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["guess"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "";
+    var helper;
+
+  return "<img src=\""
+    + this.escapeExpression(((helper = (helper = helpers['img??'] || (depth0 != null ? depth0['img??'] : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"img??","hash":{},"data":data}) : helper)))
+    + "\">\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["main"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<section class=\"loginForm\">\n  <h3>Log In</h3>\n  <form>\n    <p>Username:</p>\n    <input type=\"text\" id=\"login-user\">\n    <p>Password:</p>\n    <input type=\"text\" id=\"login-pwd\">\n    <button>Login</button>\n  </form>\n</section>\n\n\n<section class=\"newUser\">\n  <h3>New User</h3>\n  <form>\n    <p>Name:</p>\n    <input type=\"text\" id=\"new-name\">\n    <p>Email:</p>\n    <input type=\"text\" id=\"new-email\">\n    <p>Username:</p>\n    <input type=\"text\" id=\"new-username\">\n    <p>Password:</p>\n    <input type=\"text\" id=\"new-pwd\">\n    <input type=\"text\" id=\"ver-pwd\">\n    <button>Sign Me Up</button>\n  </form>\n</section>\n";
+    return "<section class=\"loginForm\">\n  <h3>Log In</h3>\n  <form>\n    <p>Username:</p>\n    <input type=\"text\" id=\"login-user\">\n    <p>Password:</p>\n    <input type=\"text\" id=\"login-pwd\">\n    <button>Login</button>\n  </form>\n</section>\n\n\n<section class=\"newUser\">\n  <h3>New User</h3>\n  <form>\n    <p>Name:</p>\n    <input type=\"text\" id=\"new-name\">\n    <p>Email:</p>\n    <input type=\"text\" id=\"new-email\">\n    <p>Username:</p>\n    <input type=\"text\" id=\"new-username\">\n    <p>Password:</p>\n    <input type=\"text\" id=\"new-pwd\">\n    <input type=\"text\" id=\"ver-pwd\">\n\n    <div class='pwError'></div>\n\n    <button>Sign Me Up</button>\n\n  </form>\n</section>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["scoreboard"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
@@ -51,7 +59,7 @@ this["hbs"]["scoreboard"] = Handlebars.template({"1":function(depth0,helpers,par
     var stack1;
 
   return "<table class=\"score-main\">\n  <thead>\n    <tr>\n      <th width=\"200\">Player</th>\n      <th width=\"150\">Score</th>\n    </tr>\n  </thead>\n  <tbody>\n"
-    + ((stack1 = helpers.each.call(depth0,{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.user : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "  </tbody>\n</table>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
