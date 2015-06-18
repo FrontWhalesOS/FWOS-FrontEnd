@@ -8,7 +8,7 @@
 
     comparator: 'lastName',
 
-    url: app.rootURL
+    url: 'https://morning-sands-1943.herokuapp.com/users/'
 
   });
 
