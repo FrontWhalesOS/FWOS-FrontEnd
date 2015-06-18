@@ -17,8 +17,8 @@
       'dashboard' : 'dashboardPage',
       'scores' : 'scoresPage',
       'about' : 'aboutPage',
-      ':user_name' : 'profilePage',
       'guess' : 'guessPage',
+      ':user_name' : 'profilePage',
       ':user_name/photos' : 'userPhotos',
       '*path' : 'errorPage'
 
@@ -48,6 +48,12 @@
         collection : this.collection
 
       });
+    },
+
+    guessPage: function(){
+      new app.Views.Guess({
+        collection: this.collection
+      })
     },
 
     profilePage: function(){
