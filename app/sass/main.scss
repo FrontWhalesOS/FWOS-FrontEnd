@@ -91,6 +91,11 @@ body{
   margin-top: 5em;
   border-radius: 8px;
   overflow: hidden;
+  transition: all 1s ease;
+
+  section {
+    transition: all 1s ease;
+  }
 
   h3 {
     color: $pureWhite;
@@ -101,7 +106,9 @@ body{
     display: block;
     clear:both;
     box-shadow: 1px 1px 1px $navBlack;
+    cursor: pointer;
   }
+
   .loginWrap {
     height: 225px;
   }
@@ -109,7 +116,7 @@ body{
   form {
     padding-top: 1.5em;
     padding-bottom: 1.5em;
-    height:auto;
+    transition: height 1s ease;
   }
 
   .inputWrap {
@@ -138,6 +145,7 @@ body{
 
   button {
     border-radius: 4px;
+    outline: none;
   }
 
 }

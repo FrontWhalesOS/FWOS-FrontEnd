@@ -58,7 +58,10 @@ body {
   border: solid 2px #F04124;
   margin-top: 5em;
   border-radius: 8px;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: all 1s ease; }
+  .front section {
+    transition: all 1s ease; }
   .front h3 {
     color: #FFFFFF;
     background-color: #9C9D9D;
@@ -67,13 +70,14 @@ body {
     margin: 0;
     display: block;
     clear: both;
-    box-shadow: 1px 1px 1px #333333; }
+    box-shadow: 1px 1px 1px #333333;
+    cursor: pointer; }
   .front .loginWrap {
     height: 225px; }
   .front form {
     padding-top: 1.5em;
     padding-bottom: 1.5em;
-    height: auto; }
+    transition: height 1s ease; }
   .front .inputWrap {
     display: block; }
   .front .connectInput {
@@ -90,4 +94,5 @@ body {
     text-align: right;
     padding-right: 10px; }
   .front button {
-    border-radius: 4px; }
+    border-radius: 4px;
+    outline: none; }
