@@ -2,11 +2,11 @@
 
   'use strict';
 
-  app.Views.Dashboard = Backbone.View.extend({
+  app.Views.About = Backbone.View.extend({
 
-    className: "dash",
+    className: "about",
 
-    template: hbs.dashboard,
+    template: hbs.about,
 
     initialize: function(options) {
 
@@ -16,10 +16,11 @@
 
       this.render();
       $('.container').html(this.el);
+
     },
 
     render: function(){
-      this.$el.html(this.template({ user: this.collection.toJSON() }))
+      this.$el.html(this.template);
 
     }
 

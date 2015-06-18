@@ -15,17 +15,31 @@
 
       '' : 'homePage',
       'dashboard' : 'dashboardPage',
+      'scores' : 'scoresPage',
+      'about' : 'aboutPage',
       ':user_name' : 'profilePage',
       'guess' : 'guessPage',
       ':user_name/photos' : 'userPhotos',
-      'scores' : 'scoresPage',
-      'about' : 'aboutPage',
       '*path' : 'errorPage'
 
     },
+    dashboardPage: function(){
+      new app.Views.Dashboard({
+
+        collection: this.collection
+
+      });
+    },
+    scoresPage: function(){
+      new app.Views.Scoreboard({
+
+        collection : this.collection
+
+      });
+    },
 
     aboutPage: function() {
-
+      new app.Views.About();
     },
 
     homePage: function() {
@@ -36,9 +50,20 @@
       });
     },
 
+    profilePage: function(){
+      new app.Views.User({
+
+        collection: this.collection
+
+      });
+
+    },
+
     errorPage: function() {
       $('.container').html('404 Not Found');
     }
+
+
 
   });
 }());

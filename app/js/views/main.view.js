@@ -25,9 +25,16 @@
      $('.container').html(this.el);
    },
 
+<<<<<<< HEAD
    render: function(){
      this.$el.html(this.template)
    },
+=======
+    render: function(){
+      this.$el.html(this.template)
+    },
+    registerUser: function(event) {
+>>>>>>> cb1a9d13cc327fc09a0e5ab48b0ecab9954f6d57
 
    registerUser : function(event) {
 
