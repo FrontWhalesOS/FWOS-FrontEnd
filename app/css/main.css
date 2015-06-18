@@ -90,3 +90,24 @@ body {
     padding-right: 10px; }
   .front button {
     border-radius: 4px; }
+
+.score-main {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+  width: 60%; }
+  .score-main th {
+    height: 50px;
+    color: #EE422E;
+    font-size: 20px; }
+
+footer {
+  background-color: #333333;
+  height: 54px;
+  border-bottom: solid 4px #F04124; }
+  footer h3 {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1em;
+    font-weight: lighter;
+    padding-top: 15px; }
