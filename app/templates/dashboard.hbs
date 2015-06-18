@@ -1,22 +1,29 @@
-<ul class="main-pics">
-  {{#each user}}
-  <li><a href=""><img src="{{?img?}}"></a></li>
-  {{/each}}
-</ul>
+<div class="dashWrapper">
 
+  <ul class="mainPics">
 
-<table class="score-dash">
-  <thead>
-    <tr>
-      <th width="200">Player</th>
-      <th width="150">Score</th>
-    </tr>
-  </thead>
-  <tbody>
+    <h3>User Photos</h3>
+
     {{#each user}}
-    <tr>
-      <td>{{ user }}</td>
-      <td>{{ score }}</td>
+    <li><a href=""><img src="{{?img?}}"></a></li>
     {{/each}}
-  </tbody>
-</table>
+  </ul>
+
+
+  <table class="scoreDash">
+    <thead>
+      <tr>
+        <th width="200">Player</th>
+        <th width="150">Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each user}}
+      <tr>
+        <td>{{ user }}</td>
+        <td>{{ score }}</td>
+      {{/each}}
+    </tbody>
+  </table>
+
+</div>

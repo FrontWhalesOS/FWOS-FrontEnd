@@ -180,6 +180,59 @@ body{
   }
 
   p {
-    padding: 0.6em 0 0.6em 1em;
+    padding: 0.6em 1em 0.6em 1em;
+  }
+}
+
+///
+///
+///
+
+
+///
+/// Dashboard Styling
+///
+
+.dashWrapper {
+  @include outer-container();
+
+  .mainPics {
+    @include span-columns(7.4);
+    color: $pureWhite;
+    text-shadow: 1px 1px 3px $hoverBlack;
+    border: solid 2px $headBorderRed;
+    margin-top: 5em;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 60em; //delete later;
+    clear:both;
+    float: left;
+
+    h3 {
+      color: $pureWhite;
+      background-color: $midGray;
+      width: 100%;
+      padding: 0.6em 0 0.6em 1em;
+      margin: 0;
+      display: block;
+      clear:both;
+      box-shadow: 1px 1px 1px $navBlack;
+    }
+  }
+
+  .scoreDash {
+    @include span-columns(3);
+    text-shadow: 1px 1px 3px $navGray;
+    border: solid 2px $headBorderRed;
+    margin-top: 5em;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 45em; //delete later;
+    float: right;
+  }
+
+  th{
+    box-shadow: 1px -5px 2px 0px $navBlack;
+    padding: 0.65em 5em 0.65em 1em;
   }
 }

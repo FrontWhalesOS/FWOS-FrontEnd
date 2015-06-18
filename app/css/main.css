@@ -115,4 +115,55 @@ body {
     box-shadow: 1px 1px 1px #333333;
     color: #FFFFFF; }
   .aboutWrap p {
-    padding: 0.6em 0 0.6em 1em; }
+    padding: 0.6em 1em 0.6em 1em; }
+
+.dashWrapper {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .dashWrapper::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .dashWrapper .mainPics {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 60.7629%;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 3px #000101;
+    border: solid 2px #F04124;
+    margin-top: 5em;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 60em;
+    clear: both;
+    float: left; }
+    .dashWrapper .mainPics:last-child {
+      margin-right: 0; }
+    .dashWrapper .mainPics h3 {
+      color: #FFFFFF;
+      background-color: #9C9D9D;
+      width: 100%;
+      padding: 0.6em 0 0.6em 1em;
+      margin: 0;
+      display: block;
+      clear: both;
+      box-shadow: 1px 1px 1px #333333; }
+  .dashWrapper .scoreDash {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    text-shadow: 1px 1px 3px #515151;
+    border: solid 2px #F04124;
+    margin-top: 5em;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 45em;
+    float: right; }
+    .dashWrapper .scoreDash:last-child {
+      margin-right: 0; }
+  .dashWrapper th {
+    box-shadow: 1px -5px 2px 0px #333333;
+    padding: 0.65em 5em 0.65em 1em; }
