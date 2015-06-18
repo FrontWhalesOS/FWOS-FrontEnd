@@ -18,7 +18,7 @@ body {
   display: block;
   height: 54px;
   text-align: center;
-  border-top: solid 4px #F92772; }
+  border-top: solid 4px #C61F1F; }
   .navBar .linkWraps {
     height: 40px;
     margin: 0 auto; }
@@ -31,7 +31,8 @@ body {
     width: auto;
     height: 100%;
     font-weight: lighter;
-    font-size: 1em; }
+    font-size: 1em;
+    transition: background-color 0.75s ease; }
   .navBar .navLinks:hover {
     background-color: #000101; }
   .navBar .navList {
@@ -41,8 +42,10 @@ body {
     display: inline-block;
     width: 10%;
     background-color: #515151;
-    padding: 50px 0 50px 0;
-    border: solid 3px #F92772;
-    margin-top: -48px;
+    padding: 40px 0 29px 0;
+    border: solid 3px #C61F1F;
+    margin-top: -74px;
     border-radius: 50%;
-    color: white; }
+    color: white;
+    font-size: 2.0em;
+    text-shadow: 1px 1px 9px #000101; }

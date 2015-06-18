@@ -5,7 +5,7 @@ $navGray: #515151;
 $navBlack: #333333;
 $hoverBlack: #000101;
 $pureWhite: #FFFFFF;
-$razzmataz: #F92772;
+$headBorderRed: #C61F1F;
 
 @mixin navLink() {
   color: $pureWhite;
@@ -17,6 +17,7 @@ $razzmataz: #F92772;
   height: 100%;
   font-weight: lighter;
   font-size: 1em;
+  transition: background-color 0.75s ease;
 }
 
 body{
@@ -33,7 +34,7 @@ body{
   display: block;
   height: 54px;
   text-align: center;
-  border-top: solid 4px $razzmataz;
+  border-top: solid 4px $headBorderRed;
 
   .linkWraps {
     height: 40px;
@@ -56,10 +57,12 @@ body{
     display: inline-block;
     width: 10%;
     background-color: $navGray;
-    padding: 50px 0 50px 0;
-    border: solid 3px $razzmataz;
-    margin-top: -48px;
+    padding: 40px 0 29px 0;
+    border: solid 3px $headBorderRed;
+    margin-top: -74px;
     border-radius: 50%;
     color: white;
+    font-size: 2.0em;
+    text-shadow: 1px 1px 9px $hoverBlack;
   }
 }
