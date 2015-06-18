@@ -141,7 +141,7 @@ body{
 
 
 }
-
+//scoreboard styles
  .score-main {
      margin-left: auto;
      margin-right: auto;
@@ -154,21 +154,48 @@ body{
      }
 
  }
-
 //footer styles
-footer{
-  background-color: $navBlack;
-  height: 54px;
-  border-bottom: solid 4px $headBorderRed;
+footer {
+    background-color: $navBlack;
+    height: 54px;
+    border-bottom: solid 4px $headBorderRed;
+    .left {
+      padding-left: 5%;
 
-  h3{
-    color: $pureWhite;
-    text-align: center;
-    font-size: 1em;
-    font-weight: lighter;
-    padding-top: 15px;
+        h3 {
+            color: $pureWhite;
+            text-align: center;
+            font-size: 1em;
+            font-weight: lighter;
+            padding-top: 15px;
+        }
+    }
+    .right {
+       padding-top: 15px;
+       padding-right: 5%;
+       .line{
+        color: $pureWhite;
+        padding-right: 9px;
+        padding-left: 9px;
+                    font-weight: lighter;
 
-  }
+       }
+        .socMedia {
+            color: $pureWhite;
+            font-size: 1em;
+            font-weight: lighter;
+            // margin-left: 3px;
+
+        }
+
+        .socMedia:hover {
+          background-color: $hoverBlack;
+          height: 40px;
+
+        }
+    }
+
 }
+
 
 

@@ -105,9 +105,26 @@ footer {
   background-color: #333333;
   height: 54px;
   border-bottom: solid 4px #F04124; }
-  footer h3 {
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 1em;
-    font-weight: lighter;
-    padding-top: 15px; }
+  footer .left {
+    padding-left: 5%; }
+    footer .left h3 {
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 1em;
+      font-weight: lighter;
+      padding-top: 15px; }
+  footer .right {
+    padding-top: 15px;
+    padding-right: 5%; }
+    footer .right .line {
+      color: #FFFFFF;
+      padding-right: 9px;
+      padding-left: 9px;
+      font-weight: lighter; }
+    footer .right .socMedia {
+      color: #FFFFFF;
+      font-size: 1em;
+      font-weight: lighter; }
+    footer .right .socMedia:hover {
+      background-color: #000101;
+      height: 40px; }
