@@ -10,7 +10,7 @@ body {
   background-color: #515151; }
 
 .navBar {
-  padding-left: 5.7em;
+  padding-right: 0.8em;
   width: 100%;
   margin-top: 0;
   margin-left: 0;
@@ -61,7 +61,8 @@ body {
   overflow: hidden;
   transition: all 1s ease; }
   .front section {
-    transition: all 1s ease; }
+    transition: all 1s ease;
+    padding-left: 10.1em; }
   .front h3 {
     color: #FFFFFF;
     background-color: #9C9D9D;
@@ -96,3 +97,22 @@ body {
   .front button {
     border-radius: 4px;
     outline: none; }
+
+.aboutWrap {
+  color: #FFFFFF;
+  text-shadow: 1px 1px 3px #000101;
+  border: solid 2px #F04124;
+  margin-top: 5em;
+  border-radius: 8px;
+  overflow: hidden; }
+  .aboutWrap h3 {
+    background-color: #9C9D9D;
+    width: 100%;
+    padding: 0.6em 0 0.6em 1em;
+    margin: 0;
+    display: block;
+    clear: both;
+    box-shadow: 1px 1px 1px #333333;
+    color: #FFFFFF; }
+  .aboutWrap p {
+    padding: 0.6em 0 0.6em 1em; }

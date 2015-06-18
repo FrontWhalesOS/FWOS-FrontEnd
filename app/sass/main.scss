@@ -32,7 +32,7 @@ body{
 //
 
 .navBar {
-  padding-left: 5.7em;
+  padding-right: 0.8em;
   width: 100%;
   margin-top: 0;
   margin-left: 0;
@@ -75,7 +75,7 @@ body{
 }
 
 //
-// end nav
+//
 //
 
 
@@ -95,6 +95,7 @@ body{
 
   section {
     transition: all 1s ease;
+    padding-left: 10.1em;
   }
 
   h3 {
@@ -148,4 +149,37 @@ body{
     outline: none;
   }
 
+}
+
+///
+///
+///
+
+
+///
+/// about.hbs  styling
+///
+
+.aboutWrap {
+  color: $pureWhite;
+  text-shadow: 1px 1px 3px $hoverBlack;
+  border: solid 2px $headBorderRed;
+  margin-top: 5em;
+  border-radius: 8px;
+  overflow: hidden;
+
+  h3 {
+    background-color: $midGray;
+    width: 100%;
+    padding: 0.6em 0 0.6em 1em;
+    margin: 0;
+    display: block;
+    clear:both;
+    box-shadow: 1px 1px 1px $navBlack;
+    color: $pureWhite;
+  }
+
+  p {
+    padding: 0.6em 0 0.6em 1em;
+  }
 }
