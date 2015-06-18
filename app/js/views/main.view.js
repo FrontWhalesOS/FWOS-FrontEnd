@@ -25,7 +25,10 @@
       $('.container').html(this.el);
     },
 
-    render : function(event) {
+    render: function(){
+      this.$el.html(this.template)
+    },
+    registerUser: function(event) {
 
       event.preventDefault();
 
