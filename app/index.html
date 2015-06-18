@@ -10,24 +10,39 @@
 
 </head>
 <body>
+
   <header class="navBar">
-    <a href="#" id="home-link"><span>Dashboard</span></a>
-    <a href="#" id="register-link"><span>Sign Up</span></a>
-    <a href="#" id="guess-link"><span>Play Fwos</span></a>
-    <a href="#" id="scoreboard-link"><span>Scores</span></a>
+
+    <div class ="navList">
+      <span class = "linkWraps"><a href="#" id="scoreboard-link" class="navLinks leftLinks">Scores</a></span>
+      <span class = "linkWraps"><a href="#" id="register-link" class="navLinks leftLinks">Register</a></span>
+      <span class = "linkWraps"><a href="#" id="guess-link" class="navLinks leftLinks">Play</a></span>
+      <span class = "linkWraps"><a href="#" id="home-link" class="navLinks leftLinks">Dashboard</a></span>
+    </div>
 
 
-    <h1></h1>
+    <span class="logo">FwOS</span>
 
-    <a href="#" id="username-link"><span></span></a>
-    <a href="#" class="socMedia"><span>Facebook</span></a>
-    <a href="#" class="socMedia"><span>Twitter</span></a>
-    <a href="#" class="socMedia"><span>Instagram</span></a>
-    <a href="#" id="about-link"><span>About</span></a>
+    <div class ="navList">
+      <span class = "linkWraps"><a href="#" id="username-link" class="navLinks rightLinks">username</a></span>
+      <span class = "linkWraps"><a href="#" class="socMedia fb navLinks rightLinks">Facebook</a></span>
+      <span class = "linkWraps"><a href="#" class="socMedia tw navLinks rightLinks">Twitter</a></span>
+      <span class = "linkWraps"><a href="#" class="socMedia ig navLinks rightLinks">Instagram</a></span>
+      <span class = "linkWraps"><a href="#" id="about-link" class="navLinks rightLinks">About</a></span>
+    </div>
+
   </header>
+
+
+
+
+
+
   <div class="container">
 
   </div>
+
+
 
   <!-- VENDOR -->
   <script src="js/vendor/jquery.js"></script>
@@ -36,12 +51,13 @@
   <script src="js/vendor/backbone.js"></script>
   <script src="js/vendor/foundation.js"></script>
 
-
   <!-- TEMPLATES -->
   <script src="js/templates.js"></script>
+
   <!-- Setup Files -->
   <script src="js/url.js"></script>
   <script src="js/setup.js"></script>
+
   <!-- Constructors -->
   <script src="js/models/guess.model.js"></script>
   <script src="js/models/user.model.js"></script>
@@ -54,11 +70,6 @@
   <script src="js/views/dashboard.view.js"></script>
   <script src="js/views/scoreboard.view.js"></script>
   <script src="js/views/submit.view.js"></script>
-
-
-
-
-
 
   <!-- Main -->
   <script src="js/main.js"></script>

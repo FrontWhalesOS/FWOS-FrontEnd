@@ -36,7 +36,7 @@ this["hbs"]["guess"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"ma
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["main"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<section class=\"login-form\">\n  <h3>Log In</h3>\n  <form>\n    <p>Username:</p>\n    <input type=\"text\" id=\"loginUser\">\n    <p>Password:</p>\n    <input type=\"text\" id=\"loginPwd\">\n    <button>Login</button>\n  </form>\n</section>\n\n\n<section class=\"new-user\">\n  <h3>New User</h3>\n  <form>\n    <p>Name:</p>\n    <input type=\"text\" id=\"newName\">\n    <p>Email:</p>\n    <input type=\"text\" id=\"newEmail\">\n    <p>Username:</p>\n    <input type=\"text\" id=\"newUsername\">\n    <p>Password:</p>\n    <input type=\"text\" id=\"newPwd\">\n    <button>Sign Me Up</button>\n  </form>\n</section>\n";
+    return "<section class=\"loginForm\">\n  <h3>Log In</h3>\n  <form>\n    <p>Username:</p>\n    <input type=\"text\" id=\"login-user\">\n    <p>Password:</p>\n    <input type=\"text\" id=\"login-pwd\">\n    <button>Login</button>\n  </form>\n</section>\n\n\n<section class=\"newUser\">\n  <h3>New User</h3>\n  <form>\n    <p>Name:</p>\n    <input type=\"text\" id=\"new-name\">\n    <p>Email:</p>\n    <input type=\"text\" id=\"new-email\">\n    <p>Username:</p>\n    <input type=\"text\" id=\"new-username\">\n    <p>Password:</p>\n    <input type=\"text\" id=\"new-pwd\">\n    <input type=\"text\" id=\"ver-pwd\">\n    <button>Sign Me Up</button>\n  </form>\n</section>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["scoreboard"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {

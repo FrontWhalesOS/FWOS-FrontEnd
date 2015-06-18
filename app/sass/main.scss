@@ -1,2 +1,70 @@
 @import '../css/vendor/bourbon/bourbon';
 @import '../css/vendor/neat/neat';
+
+$navGray: #515151;
+$navBlack: #333333;
+$hoverBlack: #000101;
+$pureWhite: #FFFFFF;
+$headBorderRed: #C61F1F;
+
+@mixin navLink() {
+  color: $pureWhite;
+  padding: 15px 15px 11px 15px;
+  margin: 0 0 0 0;
+  background-color: transparent;
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  font-weight: lighter;
+  font-size: 1em;
+  transition: background-color 0.5s ease;
+  text-shadow: 1px 1px 3px $hoverBlack;
+}
+
+body{
+  background-color: $navGray;
+}
+
+// navigation bar styling
+.navBar {
+  padding-left: 5.7em;
+  width: 100%;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: $navBlack;
+  display: block;
+  height: 54px;
+  text-align: center;
+  border-top: solid 4px $headBorderRed;
+
+  .linkWraps {
+    height: 40px;
+    margin: 0 auto;
+  }
+  .navLinks {
+    @include navLink();
+  }
+
+  .navLinks:hover{
+    background-color: $hoverBlack;
+  }
+
+  .navList {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: inline-block;
+    width: 10%;
+    background-color: $navGray;
+    padding: 40px 0 29px 0;
+    border: solid 3px $headBorderRed;
+    margin-top: -74px;
+    border-radius: 50%;
+    color: white;
+    font-size: 2.0em;
+    text-shadow: 1px 1px 9px $hoverBlack;
+  }
+}

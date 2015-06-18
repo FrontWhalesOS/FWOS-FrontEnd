@@ -11,7 +11,7 @@
       user_name: "",
       password: "",
       full_name: "",
-      email: ""
+      email: "" // still looking for possible user_id, user_token
 
     }
 
