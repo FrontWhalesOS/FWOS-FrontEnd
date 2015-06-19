@@ -20,12 +20,22 @@
       });
 
       $('.container').html(this.el);
+
     },
 
-    render: function(){
-      this.$el.html(this.template({ post: this.collectionPosts.toJSON() }));
 
+    render: function(){
+      // this.$el.html(this.template({ post: this.collectionPosts.toJSON() }));
+
+      var guesses = this.getRandomSet();
+      console.log(guesses);
+      this.$el.html(this.template({guesses : guesses}));
+    },
+
+    getRandomSet: function() {
+      return this.collectionPosts.sample(4);
     }
+
 
   });
 

@@ -1,22 +1,27 @@
 
 
 
-<img src="{{image_url}}">
-<main class = "front row">
+
+<div class="imgWrap">
+  {{#rand guesses}}
+  {{/rand}}
+</div>
+
+
+<main class = "guessContainer row">
+
   <h3>What's your guess?</h3>
- <div class="small-8 columns newUserWrap">
+
+  <div class="small-12 columns guessWrap">
 
     <section>
       <form>
-        <div class="inputWrap row"><p class="connectInput small-4 columns">Answer1</p>
-        <input type="radio" class="connectInput"></div>
-        <div class="inputWrap row"><p class="connectInput small-4 columns">Answer2</p>
-        <input type="radio" class="connectInput"></div>
-        <div class="inputWrap row"><p class="connectInput small-4 columns">Answer3</p>
-        <input type="radio" class="connectInput"></div>
-
+        {{#each guesses}}
+        <div class="guessBtnWrap"><button data-id="{{ attributes._id }}" class="connectInput small-9 columns alert" id="guessBtn">{{ attributes.image_name }}</button></div>
+        {{/each}}
       </form>
-
     </section>
+
   </div>
-  </main>
+
+</main>

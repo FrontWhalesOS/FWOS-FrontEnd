@@ -1,6 +1,7 @@
 ;(function (){
 
   'use strict';
+
   $.ajaxSetup({
     headers: {
       'Access-Token' : Cookies.get('access_token')
@@ -30,4 +31,18 @@
       $('#logout-box').fadeOut(250);
     });
   });
+
+  //handelbars helper to select item at random
+  Handlebars.registerHelper('rand', function(guesses) {
+
+  var output = "<img class = 'randomImage'";
+
+  var x = Math.round(Math.random() * ( guesses.length - 1 ));
+  var i = x;
+
+  output += ' data-id = "' + guesses[i].attributes._id + '"' + ' src = "' + guesses[i].attributes.image_url + '"';
+
+  return output + ">";
+});
+
 }());

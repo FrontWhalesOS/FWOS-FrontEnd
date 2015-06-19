@@ -8,6 +8,7 @@ $pureWhite: #FFFFFF;
 $headBorderRed: #F04124;
 $ltGray: #DBDCDE;
 $midGray: #9C9D9D;
+$midMidGray: #939394;
 
 @mixin navLink() {
   color: $pureWhite;
@@ -322,3 +323,65 @@ footer {
   }
 }
 
+///
+/// Guess.hbs page styling - many elements are taking on inherited styling from main.hbs
+///
+
+.imgWrap {
+
+  color: $pureWhite;
+  text-shadow: 1px 1px 3px $hoverBlack;
+  border: solid 2px $headBorderRed;
+  margin-top: 5em;
+  margin-bottom: 2em;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: $navBlack;
+  text-align: center;
+}
+
+.randomImage{
+  width: 350px;
+  height: 300px;
+  border-radius: 4px;
+  border: solid 2px $headBorderRed;
+  margin: 2em 0 2em 0;
+}
+
+.guessContainer {
+
+  color: $pureWhite;
+  text-shadow: 1px 1px 3px $hoverBlack;
+  border: solid 2px $headBorderRed;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: $navBlack;
+
+  h3 {
+    color: $pureWhite;
+    background-color: $midGray;
+    width: 100%;
+    padding: 0.6em 0 0.6em 1em;
+    margin: 0;
+    display: block;
+    clear:both;
+    box-shadow: 1px 1px 1px $navBlack;
+    cursor: pointer;
+  }
+
+  .guessWrap {
+    margin:0;
+  }
+
+  section {
+    padding: 0em;
+    clear: both;
+  }
+
+  button {
+    margin: 1em 0em 1em 7em;
+    border-radius: 8px;
+  }
+}
