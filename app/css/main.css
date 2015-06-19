@@ -52,6 +52,24 @@ body {
     font-size: 2.0em;
     text-shadow: 1px 1px 9px #000101; }
 
+.dropDown {
+  position: relative; }
+  .dropDown .logoutBox {
+    position: absolute;
+    color: #FFFFFF;
+    left: 0em;
+    bottom: -64px;
+    font-weight: lighter;
+    background-color: #333333;
+    padding: 15px 22.5px 11px 22.5px;
+    font-size: 1em;
+    display: none;
+    border-bottom-right-radius: 4px; }
+  .dropDown .logoutBox:hover {
+    background-color: #000101; }
+  .dropDown .logoutBox:hover #username-link {
+    background-color: #000101; }
+
 .front {
   color: #FFFFFF;
   text-shadow: 1px 1px 3px #000101;

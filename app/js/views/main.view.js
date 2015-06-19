@@ -90,11 +90,11 @@
 
    openReg: function() {
     $('#register-form').slideDown();
-    $('#login-form').slideUp();
+    $('#login-wrap').slideUp();
    },
 
    openLogin: function() {
-    $('#login-form').slideDown();
+    $('#login-wrap').slideDown();
     $('#register-form').slideUp();
    }
  });

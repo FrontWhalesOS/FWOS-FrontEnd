@@ -19,4 +19,13 @@
     Backbone.history.start();
 
   });
+
+  //login/out link hover function
+
+  $('#username-link').on('mouseenter', function() {
+    $('#logout-box').fadeIn(250);
+    $('#logout-box').on('mouseleave', function() {
+      $('#logout-box').fadeOut(250);
+    });
+  });
 }());

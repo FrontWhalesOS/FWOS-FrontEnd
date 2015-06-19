@@ -74,6 +74,31 @@ body{
   }
 }
 
+.dropDown {
+  position: relative;
+
+  .logoutBox {
+    position: absolute;
+    color: $pureWhite;
+    left: 0em;
+    bottom: -64px;
+    font-weight: lighter;
+    background-color: $navBlack;
+    padding: 15px 22.5px 11px 22.5px;
+    font-size: 1em;
+    display: none;
+    border-bottom-right-radius: 4px;
+  }
+
+  .logoutBox:hover {
+    background-color: $hoverBlack;
+  }
+
+  .logoutBox:hover #username-link {
+    background-color: $hoverBlack;
+  }
+}
+
 //
 //
 //
