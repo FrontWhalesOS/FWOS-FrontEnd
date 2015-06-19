@@ -13,4 +13,12 @@
 
   });
 
+  app.Collections.Posts = Backbone.Collection.extend({
+
+    model: app.Models.Post,
+
+    url: postendpoint
+
+  });
+
 }());

@@ -4,8 +4,8 @@
 
     <h3>User Photos</h3>
 
-    {{#each user}}
-    <li><a href=""><img src="{{?img?}}"></a></li>
+    {{#each post}}
+    <li>{{image_name}}<a href="{{image_url}}"><img src="{{ image_url }}"></a></li>
     {{/each}}
   </ul>
 

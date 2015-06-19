@@ -67,8 +67,6 @@ body {
     border-bottom-right-radius: 4px; }
   .dropDown .logoutBox:hover {
     background-color: #000101; }
-  .dropDown .logoutBox:hover #username-link {
-    background-color: #000101; }
 
 .front {
   color: #FFFFFF;
@@ -161,7 +159,8 @@ footer {
   border: solid 2px #F04124;
   margin-top: 5em;
   border-radius: 8px;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 5em; }
   .aboutWrap h3 {
     background-color: #9C9D9D;
     width: 100%;

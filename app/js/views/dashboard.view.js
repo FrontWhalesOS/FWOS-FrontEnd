@@ -10,17 +10,20 @@
 
     initialize: function(options) {
 
-      var args = options || {};
+      var args = options || {},
+          self = this;
 
-      this.collection = args.collection;
+      this.collectionUsers = args.collectionUsers;
+      this.collectionPosts = args.collectionPosts;
 
-      this.render();
+      this.collectionPosts.fetch().success (function() {
+        self.render();
+      })
       $('.container').html(this.el);
     },
 
     render: function(){
-      this.$el.html(this.template({ user: this.collection.toJSON() }))
-
+      this.$el.html(this.template({ post: this.collectionPosts.toJSON() }))
     }
 
   });
