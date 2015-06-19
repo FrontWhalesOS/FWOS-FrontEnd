@@ -89,6 +89,7 @@ body{
   text-shadow: 1px 1px 3px $hoverBlack;
   border: solid 2px $headBorderRed;
   margin-top: 5em;
+  margin-bottom: 5em;
   border-radius: 8px;
   overflow: hidden;
 
@@ -115,6 +116,11 @@ body{
   form {
     padding-top: 1.5em;
     padding-bottom: 1.5em;
+    clear: both;
+  }
+
+  .regForm {
+    display: none;
   }
 
   .inputWrap {

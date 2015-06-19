@@ -9,7 +9,9 @@
    events: {
 
      "submit #login-form" : "loginUser",
-     "submit #register-form" : "registerUser"
+     "submit #register-form" : "registerUser",
+     "click #reg-head" : "openReg",
+     "click #login-head": "openLogin"
 
    },
 
@@ -84,6 +86,16 @@
 
     });
 
+   },
+
+   openReg: function() {
+    $('#register-form').slideDown();
+    $('#login-form').slideUp();
+   },
+
+   openLogin: function() {
+    $('#login-form').slideDown();
+    $('#register-form').slideUp();
    }
  });
 

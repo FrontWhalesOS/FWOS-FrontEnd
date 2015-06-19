@@ -57,6 +57,7 @@ body {
   text-shadow: 1px 1px 3px #000101;
   border: solid 2px #F04124;
   margin-top: 5em;
+  margin-bottom: 5em;
   border-radius: 8px;
   overflow: hidden; }
   .front section {
@@ -75,7 +76,10 @@ body {
     height: 225px; }
   .front form {
     padding-top: 1.5em;
-    padding-bottom: 1.5em; }
+    padding-bottom: 1.5em;
+    clear: both; }
+  .front .regForm {
+    display: none; }
   .front .inputWrap {
     display: block; }
   .front .connectInput {
