@@ -1,11 +1,11 @@
 ;(function (){
 
   'use strict';
-  $.ajaxSetup({
-    headers: {
-      'Access-Token' : Cookies.get('access_token')
-    }
-  });
+  // $.ajaxSetup({
+  //   headers: {
+  //     'Access-Token' : Cookies.get('access_token')
+  //   }
+  // });
 
 
   var allUsers = new app.Collections.Users();

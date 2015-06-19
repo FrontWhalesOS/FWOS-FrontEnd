@@ -67,7 +67,7 @@
      //create user instance on registration
      var u = new app.Models.User({
 
-       user_name : user_name,
+       username : user_name,
        password : pwd,
        full_name : full_name,
        email : email
@@ -85,6 +85,40 @@
 
 
     });
+
+   },
+
+   loginUser: function(event){
+    event.preventDefault();
+    $('.alert-error').hide();
+    var url = 'https://morning-sands-1943.herokuapp.com/users/login',
+        self = this,
+        form = $(event.target),
+        loginUserName = form.find('#login-user').val(),
+        loginPwd = form.find('#login-pwd').val();
+        loginInfo = {
+          username: loginUserName,
+          password: loginPwd
+        };
+    $.ajax({
+      url: url,
+      type: 'POST',
+      dataType: 'json',
+      data: loginInfo,
+      success:function(data){
+         console.log(["Login request details: ", data]);
+
+                if(data.error) {  // If there is an error, show the error messages
+                    $('.alert-error').text(data.error.text).show();
+                }
+                else { // If not, send them back to the home page
+                    window.location.replace('#');
+                }
+            }
+          });
+
+
+
 
    },
 
