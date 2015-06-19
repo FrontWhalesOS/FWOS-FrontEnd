@@ -78,9 +78,6 @@
      this.collectionUsers.add(u)
 
      $.post('https://morning-sands-1943.herokuapp.com/users/register', u.toJSON()).success( function (data) {
-
-      Cookies.set('access_token', data.access_token);
-      Cookies.set('user_name', data.user_name);
       self.render();
 
 
@@ -91,8 +88,7 @@
    loginUser: function(event){
     event.preventDefault();
     $('.alert-error').hide();
-    var url = 'https://morning-sands-1943.herokuapp.com/users/login',
-        self = this,
+    var self = this,
         form = $(event.target),
         loginUserName = form.find('#login-user').val(),
         loginPwd = form.find('#login-pwd').val(),
@@ -100,21 +96,19 @@
           username: loginUserName,
           password: loginPwd
         };
-    $.ajax({
-      url: url,
-      type: 'POST',
-      dataType: 'json',
-      data: loginInfo,
-      success:function(data){
+        console.log(loginInfo);
+    $.post('https://morning-sands-1943.herokuapp.com/users/login', loginInfo).success( function (data){
          console.log(["Login request details: ", data]);
 
-                if(data.error) {  // If there is an error, show the error messages
-                    app.MainRouter.navigate('dashboard', { trigger: true });}
-                else { // If not, send them back to the home page
+                if(data.error) {  // If there is an error, send to back home
+                    app.MainRouter.navigate('', { trigger: true });}
+                else { // If not, send them to dashboard
                     app.MainRouter.navigate('dashboard', { trigger: true });
                 }
-            }
+                   Cookies.set('access_token', data.access_token);
+                   Cookies.set('username', data.username);
           });
+
 
 
 
