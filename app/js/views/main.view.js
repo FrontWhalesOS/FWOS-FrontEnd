@@ -95,7 +95,7 @@
         self = this,
         form = $(event.target),
         loginUserName = form.find('#login-user').val(),
-        loginPwd = form.find('#login-pwd').val();
+        loginPwd = form.find('#login-pwd').val(),
         loginInfo = {
           username: loginUserName,
           password: loginPwd
@@ -109,10 +109,9 @@
          console.log(["Login request details: ", data]);
 
                 if(data.error) {  // If there is an error, show the error messages
-                    $('.alert-error').text(data.error.text).show();
-                }
+                    app.MainRouter.navigate('dashboard', { trigger: true });}
                 else { // If not, send them back to the home page
-                    window.location.replace('#');
+                    app.MainRouter.navigate('dashboard', { trigger: true });
                 }
             }
           });
