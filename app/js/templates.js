@@ -40,7 +40,11 @@ this["hbs"]["example"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["guess"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<img src=\"http://www.placecage.com/c/460/300\">\n<main class = \"front row\">\n  <h3>What's your guess?</h3>\n <div class=\"small-8 columns newUserWrap\">\n\n    <section>\n      <form>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Answer1</p>\n        <input type=\"radio\" class=\"connectInput\"></div>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Answer2</p>\n        <input type=\"radio\" class=\"connectInput\"></div>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Answer3</p>\n        <input type=\"radio\" class=\"connectInput\"></div>\n\n      </form>\n\n    </section>\n  </div>\n  </main>\n";
+    var helper;
+
+  return "\n\n\n<img src=\""
+    + this.escapeExpression(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
+    + "\">\n<main class = \"front row\">\n  <h3>What's your guess?</h3>\n <div class=\"small-8 columns newUserWrap\">\n\n    <section>\n      <form>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Answer1</p>\n        <input type=\"radio\" class=\"connectInput\"></div>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Answer2</p>\n        <input type=\"radio\" class=\"connectInput\"></div>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Answer3</p>\n        <input type=\"radio\" class=\"connectInput\"></div>\n\n      </form>\n\n    </section>\n  </div>\n  </main>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["main"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
