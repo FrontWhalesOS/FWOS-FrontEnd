@@ -54,7 +54,7 @@
 
     guessPage: function(){
       new app.Views.Guess({
-        collectionUsers: this.collectionUsers // will change to guesses
+        collectionPosts: this.collectionPosts // will change to guesses
       })
     },
 

@@ -16,14 +16,15 @@
       this.collectionUsers = args.collectionUsers;
       this.collectionPosts = args.collectionPosts;
 
-      this.collectionPosts.fetch().success (function() {
+      this.collectionPosts.fetch().success( function() {
         self.render();
-      })
+      });
+
       $('.container').html(this.el);
     },
 
     render: function(){
-      this.$el.html(this.template({ post: this.collectionPosts.toJSON() }))
+      this.$el.html(this.template({ post: this.collectionPosts.toJSON() }));
     }
 
   });

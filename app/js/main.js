@@ -15,7 +15,7 @@
 
     app.MainRouter = new app.Routers.MainRouter({
       collectionUsers : allUsers,
-      collectionPosts: allPosts
+      collectionPosts : allPosts
     });
 
     Backbone.history.start();
