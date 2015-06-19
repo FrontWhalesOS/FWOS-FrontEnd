@@ -21,7 +21,7 @@
 
      var args = options || {};
 
-     this.collection = args.collection;
+     this.collectionUsers = args.collectionUsers;
 
 
      this.render();
@@ -75,7 +75,7 @@
      });
      console.log(u)
      //add instance to collection and push to database
-     this.collection.add(u)
+     this.collectionUsers.add(u)
 
      $.post('https://morning-sands-1943.herokuapp.com/users/register', u.toJSON()).success( function (data) {
 

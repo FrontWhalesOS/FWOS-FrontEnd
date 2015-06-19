@@ -12,7 +12,7 @@
 
       var args = options || {};
 
-      this.collection = args.collection;
+      this.collectionUsers = args.collectionUsers;
 
       this.render();
       $('.container').html(this.el);

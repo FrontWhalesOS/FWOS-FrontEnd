@@ -93,10 +93,6 @@ body{
   .logoutBox:hover {
     background-color: $hoverBlack;
   }
-
-  .logoutBox:hover #username-link {
-    background-color: $hoverBlack;
-  }
 }
 
 //
@@ -255,6 +251,7 @@ footer {
   margin-top: 5em;
   border-radius: 8px;
   overflow: hidden;
+  margin-bottom: 5em;
 
   h3 {
     background-color: $midGray;

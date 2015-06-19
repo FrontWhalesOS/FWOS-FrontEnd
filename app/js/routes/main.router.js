@@ -8,7 +8,8 @@
 
       var args = options || {};
 
-      this.collection = args.collection;
+      this.collectionUsers = args.collectionUsers;
+      this.collectionPosts = args.collectionPosts;
     },
 
     routes: {
@@ -26,14 +27,15 @@
     dashboardPage: function(){
       new app.Views.Dashboard({
 
-        collection: this.collection
+        collectionUsers: this.collectionUsers,
+        collectionPosts: this.collectionPosts
 
       });
     },
     scoresPage: function(){
       new app.Views.Scoreboard({
 
-        collection : this.collection
+        collectionUsers : this.collectionUsers // will probably be guesses later on
 
       });
     },
@@ -45,21 +47,21 @@
     homePage: function() {
       new app.Views.Main({
 
-        collection : this.collection
+        collectionUsers : this.collectionUsers
 
       });
     },
 
     guessPage: function(){
       new app.Views.Guess({
-        collection: this.collection
+        collectionUsers: this.collectionUsers // will change to guesses
       })
     },
 
     profilePage: function(){
       new app.Views.User({
 
-        collection: this.collection
+        collectionUsers: this.collectionUsers
 
       });
 
