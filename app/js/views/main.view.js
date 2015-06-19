@@ -42,7 +42,7 @@
 
      //registration form values
      var self = this,
-        form = $(event.target),
+         form = $(event.target),
          user_name = form.find('#new-username').val(),
          full_name = form.find('#new-name').val(),
          email = form.find('#new-email').val(),
