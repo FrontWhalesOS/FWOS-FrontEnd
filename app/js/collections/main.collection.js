@@ -8,8 +8,8 @@
 
     comparator: 'lastName',
 
-    // url: 'https://morning-sands-1943.herokuapp.com/users/'
-    url: myendpoint
+    url: 'https://morning-sands-1943.herokuapp.com/users/2'
+
 
   });
 

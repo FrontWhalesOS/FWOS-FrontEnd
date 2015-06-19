@@ -8,7 +8,7 @@
 
     defaults: {
 
-      user_name: "",
+      username: "",
       password: "",
       full_name: "",
       email: "" // still looking for possible user_id, user_token
