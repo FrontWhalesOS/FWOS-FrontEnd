@@ -1,13 +1,16 @@
 <table class="score-main">
   <thead>
     <tr>
-      <th width="200">Player</th>
-      <th width="150">Score</th>
+    <div class="row">
+      <th class="small-5 columns" width="200">Player</th>
+      <th class="small-5 columns" width="150">Score</th>
+      </div>
     </tr>
   </thead>
   <tbody>
     {{#each user}}
     <tr>
+
       <td>{{ user }}</td>
       <td>{{ score }}</td>
     {{/each}}
