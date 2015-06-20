@@ -39,28 +39,16 @@ this["hbs"]["example"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
     + "\n</h1>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
-this["hbs"]["guess"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
-    return "";
-},"3":function(depth0,helpers,partials,data) {
-    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
+this["hbs"]["guess"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var helper;
 
-  return "        <div class=\"guessBtnWrap\"><button data-id=\""
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.attributes : depth0)) != null ? stack1._id : stack1), depth0))
-    + "\" class=\"connectInput small-9 columns alert\" id=\"guess-btn\">"
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.attributes : depth0)) != null ? stack1.image_name : stack1), depth0))
-    + "</button></div>\n";
-},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1;
-
-  return "\n\n\n\n<div class=\"imgWrap\">\n"
-    + ((stack1 = (helpers.rand || (depth0 && depth0.rand) || helpers.helperMissing).call(depth0,(depth0 != null ? depth0.guesses : depth0),{"name":"rand","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "</div>\n\n\n<main class = \"guessContainer row\">\n\n  <h3>What's your guess?</h3>\n\n  <div class=\"small-12 columns guessWrap\">\n\n    <section>\n      <form>\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.guesses : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "      </form>\n    </section>\n\n  </div>\n\n</main>\n";
+  return "\n\n\n<img src=\""
+    + this.escapeExpression(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
+    + "\">\n<main class = \"front row\">\n  <h3>What's your guess?</h3>\n <div class=\"small-8 columns newUserWrap\">\n\n    <section>\n      <form>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Answer1</p>\n        <input type=\"radio\" class=\"connectInput\"></div>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Answer2</p>\n        <input type=\"radio\" class=\"connectInput\"></div>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Answer3</p>\n        <input type=\"radio\" class=\"connectInput\"></div>\n\n      </form>\n\n    </section>\n  </div>\n  </main>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["main"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "\n<main class = \"front row\">\n\n  <h3 class = \"loginHead\" id=\"login-head\">Log In</h3>\n\n  <div class=\"small-8 columns loginWrap\" id=\"login-wrap\">\n\n    <section class =\"loginFormContent\">\n      <form id=\"login-form\">\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Username:</p>\n        <input type=\"text\" id=\"login-user\" class=\"connectInput\"></div>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Password:</p>\n        <input type=\"password\" id=\"login-pwd\" class=\"connectInput\"></div>\n\n        <button class=\"alert\">Login</button>\n      </form>\n    </section>\n  </div>\n\n\n  <h3 class = \"regHead\" id=\"reg-head\">New User</h3>\n\n  <div class=\"small-8 columns newUserWrap\">\n\n    <section>\n      <form id=\"register-form\" class = \"regForm\">\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Name:</p>\n        <input type=\"text\" id=\"new-name\" class=\"connectInput\"></div>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Email:</p>\n        <input type=\"text\" id=\"new-email\" class=\"connectInput\"></div>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Username:</p>\n        <input type=\"text\" id=\"new-username\" class=\"connectInput\"></div>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Password:</p>\n        <input type=\"password\" id=\"new-pwd\" class=\"connectInput\"></div>\n\n        <button class=\"alert\">Sign&nbsp;Me&nbsp;Up</button>\n\n      </form>\n\n    </section>\n  </div>\n</main>\n";
+    return "\n<main class = \"front row\">\n\n  <h3 class = \"loginHead\" id=\"login-head\">Log In</h3>\n  <div class=\"alert alert-error\" style=\"display:none;\">\n</div>\n\n  <div class=\"small-8 columns loginWrap\" id=\"login-wrap\">\n\n    <section class =\"loginFormContent\">\n      <form id=\"login-form\">\n        <div class=\"alert alert-error\" style=\"display:none;\">\n        </div>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Username:</p>\n        <input type=\"text\" id=\"login-user\" class=\"connectInput\"></div>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Password:</p>\n        <input type=\"password\" id=\"login-pwd\" class=\"connectInput\"></div>\n\n        <button class=\"alert\">Login</button>\n      </form>\n    </section>\n  </div>\n\n\n  <h3 class = \"regHead\" id=\"reg-head\">New User</h3>\n\n  <div class=\"small-8 columns newUserWrap\">\n\n    <section>\n      <form id=\"register-form\" class = \"regForm\">\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Name:</p>\n        <input type=\"text\" id=\"new-name\" class=\"connectInput\"></div>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Email:</p>\n        <input type=\"text\" id=\"new-email\" class=\"connectInput\"></div>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Username:</p>\n        <input type=\"text\" id=\"new-username\" class=\"connectInput\"></div>\n        <div class=\"inputWrap row\"><p class=\"connectInput small-4 columns\">Password:</p>\n        <input type=\"password\" id=\"new-pwd\" class=\"connectInput\"></div>\n\n        <button class=\"alert\">Sign&nbsp;Me&nbsp;Up</button>\n\n      </form>\n\n    </section>\n  </div>\n</main>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["scoreboard"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {

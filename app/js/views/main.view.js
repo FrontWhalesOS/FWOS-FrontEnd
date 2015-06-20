@@ -67,7 +67,7 @@
      //create user instance on registration
      var u = new app.Models.User({
 
-       user_name : user_name,
+       username : user_name,
        password : pwd,
        full_name : full_name,
        email : email
@@ -78,13 +78,40 @@
      this.collectionUsers.add(u)
 
      $.post('https://morning-sands-1943.herokuapp.com/users/register', u.toJSON()).success( function (data) {
-
-      Cookies.set('access_token', data.access_token);
-      Cookies.set('user_name', data.user_name);
       self.render();
 
 
     });
+
+   },
+
+   loginUser: function(event){
+    event.preventDefault();
+    $('.alert-error').hide();
+    var self = this,
+        form = $(event.target),
+        loginUserName = form.find('#login-user').val(),
+        loginPwd = form.find('#login-pwd').val(),
+        loginInfo = {
+          username: loginUserName,
+          password: loginPwd
+        };
+        console.log(loginInfo);
+    $.post('https://morning-sands-1943.herokuapp.com/users/login', loginInfo).success( function (data){
+         console.log(["Login request details: ", data]);
+
+                if(data.error) {  // If there is an error, send to back home
+                    app.MainRouter.navigate('', { trigger: true });}
+                else { // If not, send them to dashboard
+                    app.MainRouter.navigate('dashboard', { trigger: true });
+                }
+                   Cookies.set('access_token', data.access_token);
+                   Cookies.set('username', data.username);
+          });
+
+
+
+
 
    },
 
