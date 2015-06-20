@@ -46,7 +46,7 @@ this["hbs"]["guess"] = Handlebars.template({"1":function(depth0,helpers,partials
 
   return "        <div class=\"guessBtnWrap\"><button data-id=\""
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.attributes : depth0)) != null ? stack1._id : stack1), depth0))
-    + "\" class=\"connectInput small-9 columns alert\" id=\"guessBtn\">"
+    + "\" class=\"connectInput small-9 columns alert\" id=\"guess-btn\">"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.attributes : depth0)) != null ? stack1.image_name : stack1), depth0))
     + "</button></div>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

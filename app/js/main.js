@@ -35,7 +35,7 @@
   //handelbars helper to select item at random
   Handlebars.registerHelper('rand', function(guesses) {
 
-  var output = "<img class = 'randomImage'";
+  var output = "<img class = 'randomImage' id='random-image'";
 
   var x = Math.round(Math.random() * ( guesses.length - 1 ));
   var i = x;
