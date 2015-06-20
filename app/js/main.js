@@ -3,9 +3,11 @@
   'use strict';
 
   $.ajaxSetup({
+
     headers: {
       'Access-Token' : Cookies.get('access_token')
     }
+
   });
 
 
