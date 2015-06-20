@@ -60,13 +60,13 @@
       })
     },
 
-    rightPage: function(){
+    rightPage: function(){ //check collections
       new app.Views.Right({
         collectionPosts: this.collectionPosts
         collectionUsers : this.collectionUsers
       })
     },
-    wrongPage: function(){
+    wrongPage: function(){ //check collections
       new app.Views.Wrong({
         collectionPosts: this.collectionPosts
         collectionUsers : this.collectionUsers
