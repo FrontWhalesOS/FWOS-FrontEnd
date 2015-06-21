@@ -2,11 +2,13 @@
 
   'use strict';
 
-  app.Views.Right = Backbone.View.extend({
+  app.Views.Answer = Backbone.View.extend({
 
-    className: "rightAnswer",
+    className: "Answer",
 
-    template: hbs.rightanswer,
+    template1: hbs.rightanswer,
+
+    template2: hbs.wrong,
 
     initialize: function(options) {
 

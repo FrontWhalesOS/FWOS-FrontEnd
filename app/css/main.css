@@ -306,6 +306,6 @@ footer {
   .guessContainer section {
     padding: 0em;
     clear: both; }
-  .guessContainer button {
+  .guessContainer a {
     margin: 1em 0em 1em 7em;
     border-radius: 8px; }

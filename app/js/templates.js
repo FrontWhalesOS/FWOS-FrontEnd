@@ -44,11 +44,11 @@ this["hbs"]["guess"] = Handlebars.template({"1":function(depth0,helpers,partials
 },"3":function(depth0,helpers,partials,data) {
     var stack1, alias1=this.lambda, alias2=this.escapeExpression;
 
-  return "        <div class=\"guessBtnWrap\"><button data-id=\""
+  return "        <div class=\"guessBtnWrap\"><a href=\"#answer\" data-id=\""
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.attributes : depth0)) != null ? stack1._id : stack1), depth0))
-    + "\" class=\"connectInput small-9 columns alert\" id=\"guess-btn\">"
+    + "\" class=\"connectInput small-9 columns button alert\" id=\"guess-btn\">"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.attributes : depth0)) != null ? stack1.image_name : stack1), depth0))
-    + "</button></div>\n";
+    + "</a></div>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 

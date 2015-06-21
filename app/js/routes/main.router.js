@@ -19,8 +19,7 @@
       'scores' : 'scoresPage',
       'about' : 'aboutPage',
       'guess' : 'guessPage',
-      'right' : 'rightPage',
-      'wrong' : 'wrongPage',
+      'answer' : 'answerPage',
       ':user_name' : 'profilePage',
       ':user_name/photos' : 'userPhotos',
       '*path' : 'errorPage'
@@ -60,14 +59,8 @@
       })
     },
 
-    rightPage: function(){ //check collections
-      new app.Views.Right({
-        collectionPosts: this.collectionPosts,
-        collectionUsers : this.collectionUsers
-      })
-    },
-    wrongPage: function(){ //check collections
-      new app.Views.Wrong({
+    answerPage: function(){ //check collections
+      new app.Views.Answer({
         collectionPosts: this.collectionPosts,
         collectionUsers : this.collectionUsers
       })
