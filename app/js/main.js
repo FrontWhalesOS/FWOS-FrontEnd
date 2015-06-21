@@ -44,12 +44,6 @@
       $('#user-box').fadeOut(250);
     });
   });
-  // $('#username-link').on('mouseenter', function() {
-  //   $('#user-box').fadeIn(250);
-  //   $('#logout-box').on('mouseleave', function() {
-  //     $('#user-box').fadeOut(250);
-  //   });
-  // });
 
   //handelbars helper to select item at random
   Handlebars.registerHelper('rand', function(guesses) {
