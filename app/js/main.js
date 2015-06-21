@@ -62,7 +62,7 @@ $('#logout-box').on('click', function(){
       Cookies.expire('access_token');
       Cookies.expire('username');
       Cookies.expire('id');
-      app.mainRouter.navigate('', { trigger: true });
+      $('#username-link').text('SignIn');
 });
 
 }());

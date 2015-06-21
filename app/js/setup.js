@@ -12,12 +12,12 @@
   //root URL
   app.rootURL = myendpoint;
 
-    $.ajaxSetup({
-    headers: {
-    'Access-Token' : Cookies.get('access_token')
-    }
-  });
+  //   $.ajaxSetup({
+  //   headers: {
+  //   'Access-Token' : Cookies.get('access_token')
+  //   }
+  // });
     var cookie = Cookies.get('username');
-$('#username-link').text(cookie);
+    $('#username-link').text(cookie);
 
 }());

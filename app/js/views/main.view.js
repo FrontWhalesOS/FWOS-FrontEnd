@@ -23,12 +23,12 @@
      var args = options || {};
 
      this.collectionUsers = args.collectionUsers;
-         window.app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
-      if (app.isLoggedIn) {
-        app.MainRouter.navigate('dashboard', { trigger: true });
-      } else {
-        app.MainRouter.navigate('', { trigger: true });
-      }
+      //    window.app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
+      // if (app.isLoggedIn) {
+      //   app.MainRouter.navigate('dashboard', { trigger: true });
+      // } else {
+      //   app.MainRouter.navigate('', { trigger: true });
+      // }
 
 
      this.render();
@@ -37,8 +37,7 @@
    },
 
    render: function(){
-    var cookie = Cookies.get('access_token');
-    console.log(cookie);
+
      this.$el.html(this.template)
   },
 
@@ -104,12 +103,12 @@
         Cookies.set('access_token', data.user.access_token);
         Cookies.set('username', data.user.username);
         app.User = data;
-        $.ajaxSetup({
-          headers: {
-            'Access-Token' : Cookies.get('access_token')
-          }
-        });
-        // app.MainRouter.navigate('dashboard', { trigger: true });
+        // $.ajaxSetup({
+        //   headers: {
+        //     'Access-Token' : Cookies.get('access_token')
+        //   }
+        // });
+        app.MainRouter.navigate('dashboard', { trigger: true });
         console.log(app.User);
       });
     $('#username-link').text(loginUserName);

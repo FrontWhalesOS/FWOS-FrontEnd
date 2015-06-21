@@ -8,9 +8,9 @@
 
     comparator: 'lastName',
 
-    url: 'https://morning-sands-1943.herokuapp.com/users/'
+    // url: 'https://morning-sands-1943.herokuapp.com/users/'
 
-    // url: myendpoint
+    url: myendpoint
 
 
 
@@ -21,6 +21,8 @@
     model: app.Models.Post,
 
     url: postendpoint
+
+    // url: 'https://morning-sands-1943.herokuapp.com/posts/'
 
   });
 
