@@ -46,13 +46,26 @@
       var guess = $(event.target);
       var guess_id = $(event.target).attr('data-id');
       var img_id = $('#random-image').attr('data-id');
+      var user = Cookies.get('username');
+      var self = this;
 
       if (guess_id == img_id) {
-        console.log('this is the one')
+
         $('.guessWrap').html(" ");
         $('.guessWrap').append("<div class='response' id='guess-response'>You are wise.  Your score has increased.</div>" +
                                 "<a class='connectInput small-9 columns button alert' href='#guess' onClick='window.location.reload(true);'>Try once more</a>");
         $('#guess-response').fadeIn(1500);
+
+        this.collectionGuesses.fetch().success(function() {
+         _.detect(self.collectionGuesses, function() {
+           if (self.username == user) {
+             console.log("LOGGED IN FOUND");
+           } else {
+             console.log("on the right track");
+           }
+         })
+       });
+
       } else if (guess_id !== img_id){
         $('.guessWrap').html("");
         $('.guessWrap').append("<div class='response' id='guess-response'>Your choice was less than wise. Your score has not increased.</div>" +
