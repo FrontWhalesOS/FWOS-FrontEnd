@@ -59,9 +59,6 @@
         collectionPosts: this.collectionPosts // will change to guesses
       })
     },
-
-<<<<<<< HEAD
-=======
     answerPage: function(){ //check collections
       new app.Views.Answer({
         collectionPosts: this.collectionPosts,
@@ -75,8 +72,6 @@
         collectionPosts: this.collectionPosts
       })
     },
-
->>>>>>> devnick
     profilePage: function(){
       new app.Views.User({
 
