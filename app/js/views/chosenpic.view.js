@@ -19,7 +19,7 @@
           this.singleId = args.singleId;
 
       this.collectionPosts = args.collectionPosts;
-      this.collectionGuesses = args.collectionGuesses;
+      // this.collectionGuesses = args.collectionGuesses;
 
       this.collectionPosts.fetch().success (function() {
         self.render();

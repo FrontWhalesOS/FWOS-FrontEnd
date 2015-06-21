@@ -39,14 +39,17 @@
   //handelbars helper to select item at random
   Handlebars.registerHelper('rand', function(guesses) {
 
-  var output = "<img class = 'randomImage' id='random-image'";
 
   var x = Math.round(Math.random() * ( guesses.length - 1 ));
   var i = x;
 
-  output += ' data-id = "' + guesses[i].attributes._id + '"' + ' src = "' + guesses[i].attributes.image_url + '"';
+  var output = "<div class = guessImgWrap>";
+      output += "<span class = 'userLabel'><i>posted&nbsp;by&nbsp;</i>" + guesses[i].attributes.username + "</span>";
+      output += "<img class = 'randomImage' id='random-image'";
+      output += ' data-id = "' + guesses[i].attributes._id + '"' + ' src = "' + guesses[i].attributes.image_url + '">';
+      output += "</div>";
 
-  return output + ">";
+  return output;
 });
 
 

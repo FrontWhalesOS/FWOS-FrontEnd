@@ -17,7 +17,7 @@
       this.collectionPosts = args.collectionPosts;
       this.collectionGuesses = args.collectionGuesses;
 
-      this.collectionGuesses.fetch();
+      // this.collectionGuesses.fetch();
       this.collectionUsers.fetch();
       this.collectionPosts.fetch().success( function() {
         self.render();

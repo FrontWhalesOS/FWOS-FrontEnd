@@ -369,7 +369,7 @@ footer {
   }
 }
 ///
-/// Guess.hbs page styling - many elements are taking on inherited styling from main.hbs
+/// Guess.hbs AND chosen.hbs page styling - many elements are taking on inherited styling from main.hbs
 ///
 
 .imgWrap {
@@ -436,4 +436,18 @@ footer {
   display: none;
   padding: 1em;
   font-size: 1.9em;
+}
+// guess.hbs
+.guessImgWrap {
+  position: relative;
+
+  .userLabel {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    height: 0;
+    width: 100%;
+    transition: height 0.9s ease;
+    opacity: 0.6;
+  }
 }

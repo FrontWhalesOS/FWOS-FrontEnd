@@ -316,3 +316,14 @@ footer {
   display: none;
   padding: 1em;
   font-size: 1.9em; }
+
+.guessImgWrap {
+  position: relative; }
+  .guessImgWrap .userLabel {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    height: 0;
+    width: 100%;
+    transition: height 0.9s ease;
+    opacity: 0.6; }
