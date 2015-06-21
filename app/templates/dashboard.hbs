@@ -6,7 +6,7 @@
 
     <div class = "allDashImgWrap" id ="all-dash-img-wrap">
     {{#each post}}
-    <li class="dashImgWrap" id="dash-img-wrap"><a href="#" class="usernameOverlay hidden" id="dash-img-overlay"><i>posted&nbsp;by&nbsp;</i>{{username}}</a><a href="{{image_url}}"><img src="{{ image_url }}" class = "dashImg"></a></li>
+    <li class="dashImgWrap" id="dash-img-wrap"><a href="#" class="usernameOverlay hidden" id="dash-img-overlay"><i>posted&nbsp;by&nbsp;</i>{{username}}</a><a href="#pic/{{_id}}"><img src="{{ image_url }}" class = "dashImg"></a></li>
     {{/each}}
     </div>
   </ul>

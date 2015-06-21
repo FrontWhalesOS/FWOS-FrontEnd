@@ -3,13 +3,21 @@ this["hbs"]["about"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"ma
     return "\n<div class=\"aboutWrap row \">\n  <h3 class=\"aboutHead\">About Page</h3>\n\n  <p class=\"small-12 columns\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n\n  <p class=\"small-12 columns\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
+this["hbs"]["chosen"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "\n\n\n\n<div class=\"imgWrap\">\n  <img src=\""
+    + this.escapeExpression(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
+    + "\">\n</div>\n\n\n";
+},"useData":true});
+this["hbs"] = this["hbs"] || {};
 this["hbs"]["dashboard"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "    <li class=\"dashImgWrap\" id=\"dash-img-wrap\"><a href=\"#\" class=\"usernameOverlay hidden\" id=\"dash-img-overlay\"><i>posted&nbsp;by&nbsp;</i>"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
-    + "</a><a href=\""
-    + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
+    + "</a><a href=\"#pic/"
+    + alias3(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
     + "\"><img src=\""
     + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
     + "\" class = \"dashImg\"></a></li>\n";
