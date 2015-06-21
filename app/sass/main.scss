@@ -417,7 +417,7 @@ footer {
   }
 
   .guessWrap {
-    margin:0;
+    margin: 0;
   }
 
   section {
@@ -429,4 +429,11 @@ footer {
     margin: 1em 0em 1em 7em;
     border-radius: 8px;
   }
+}
+
+.response {
+  color: $pureWhite;
+  display: none;
+  padding: 1em;
+  font-size: 1.9em;
 }

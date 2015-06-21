@@ -10,6 +10,7 @@
 
       this.collectionUsers = args.collectionUsers;
       this.collectionPosts = args.collectionPosts;
+      this.collectionGuesses = args.collectionGuesses;
 
     },
 
@@ -31,14 +32,15 @@
       new app.Views.Dashboard({
 
         collectionUsers: this.collectionUsers,
-        collectionPosts: this.collectionPosts
+        collectionPosts: this.collectionPosts,
+        collectionGuesses: this.collectionGuesses
 
       });
     },
     scoresPage: function(){
       new app.Views.Scoreboard({
 
-        collectionUsers : this.collectionUsers // will probably be guesses later on
+        collectionGuesses : this.collectionGuesses // will probably be guesses later on
 
       });
     },
@@ -57,22 +59,20 @@
 
     guessPage: function(){
       new app.Views.Guess({
-        collectionPosts: this.collectionPosts // will change to guesses
-      })
-    },
-    answerPage: function(){ //check collections
-      new app.Views.Answer({
         collectionPosts: this.collectionPosts,
-        collectionUsers : this.collectionUsers
+        collectionGuesses: this.collectionGuesses
       })
     },
+
     chosenPic: function(id){
 
       new app.Views.ChosenPic({
         singleId: id,
-        collectionPosts: this.collectionPosts
+        collectionPosts: this.collectionPosts,
+        collectionGuesses: this.collectionGuesses
       })
     },
+
     profilePage: function(){
       new app.Views.User({
 

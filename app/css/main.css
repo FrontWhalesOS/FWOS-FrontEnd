@@ -310,3 +310,9 @@ footer {
   .guessContainer a {
     margin: 1em 0em 1em 7em;
     border-radius: 8px; }
+
+.response {
+  color: #FFFFFF;
+  display: none;
+  padding: 1em;
+  font-size: 1.9em; }
