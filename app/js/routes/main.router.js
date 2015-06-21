@@ -10,6 +10,7 @@
 
       this.collectionUsers = args.collectionUsers;
       this.collectionPosts = args.collectionPosts;
+
     },
 
     routes: {
