@@ -23,12 +23,12 @@
      var args = options || {};
 
      this.collectionUsers = args.collectionUsers;
-      //    app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
-      // if (app.isLoggedIn) {
-      //   app.MainRouter.navigate('dashboard', { trigger: true });
-      // } else {
-      //   app.MainRouter.navigate('', { trigger: true });
-      // }
+         window.app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
+      if (app.isLoggedIn) {
+        app.MainRouter.navigate('dashboard', { trigger: true });
+      } else {
+        app.MainRouter.navigate('', { trigger: true });
+      }
 
 
      this.render();
@@ -37,7 +37,8 @@
    },
 
    render: function(){
-
+    var cookie = Cookies.get('access_token');
+    console.log(cookie);
      this.$el.html(this.template)
   },
 
@@ -99,19 +100,20 @@
           username: loginUserName,
           password: loginPwd
         };
-        console.log(loginInfo);
     $.post('https://morning-sands-1943.herokuapp.com/users/login', loginInfo).success( function (data){
-         console.log(["Login request details: ", data]);
-
-                if(data.error) {  // If there is an error, send to back home
-                    app.MainRouter.navigate('', { trigger: true });}
-                else { // If not, send them to dashboard
-                    app.MainRouter.navigate('dashboard', { trigger: true });
-                }
-                   Cookies.set('access_token', data.access_token);
-                   Cookies.set('username', data.username);
-          });
-
+        Cookies.set('access_token', data.user.access_token);
+        Cookies.set('username', data.user.username);
+        app.User = data;
+        $.ajaxSetup({
+          headers: {
+            'Access-Token' : Cookies.get('access_token')
+          }
+        });
+        // app.MainRouter.navigate('dashboard', { trigger: true });
+        console.log(app.User);
+      });
+    $('#username-link').text(loginUserName);
+    // var cookie = Cookies.get('access_token', app.LoggedInUser.access_token);
 
 
 

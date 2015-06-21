@@ -3,13 +3,19 @@
   'use strict';
 
 
-  $.ajaxSetup({
+  // $.ajaxSetup({
 
-    headers: {
-      'Access-Token' : Cookies.get('access_token')
-    }
+  //   headers: {
+  //     'Access-Token' : Cookies.get('access_token')
+  //   }
 
-  });
+  // });
+  // app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
+  // if (app.isLoggedIn) {
+  //   console.log('Yep, logged in');
+  // } else {
+  //   console.log('Nope, not logged in');
+  // }
 
 
   var allUsers = new app.Collections.Users();
@@ -52,5 +58,11 @@
   return output;
 });
 
+$('#logout-box').on('click', function(){
+      Cookies.expire('access_token');
+      Cookies.expire('username');
+      Cookies.expire('id');
+      app.mainRouter.navigate('', { trigger: true });
+});
 
 }());
