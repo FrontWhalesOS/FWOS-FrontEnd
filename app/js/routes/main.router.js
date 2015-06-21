@@ -40,7 +40,7 @@
     scoresPage: function(){
       new app.Views.Scoreboard({
 
-        collectionGuesses : this.collectionGuesses // will probably be guesses later on
+        collectionGuesses : this.collectionGuesses
 
       });
     },

@@ -8,7 +8,9 @@ this["hbs"]["chosen"] = Handlebars.template({"1":function(depth0,helpers,partial
 
   return "  <span class=\"userLabelInline\">"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
-    + "</span>\n  <img src=\""
+    + "</span>\n  <img id =\"chosen-image\" data-id=\""
+    + alias3(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
+    + "\" src=\""
     + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
     + "\">\n";
 },"3":function(depth0,helpers,partials,data) {
@@ -93,16 +95,16 @@ this["hbs"]["scoreboard"] = Handlebars.template({"1":function(depth0,helpers,par
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "    <tr>\n\n      <td>"
-    + alias3(((helper = (helper = helpers.user || (depth0 != null ? depth0.user : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user","hash":{},"data":data}) : helper)))
+    + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
     + "</td>\n      <td>"
-    + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
+    + alias3(((helper = (helper = helpers.guesses || (depth0 != null ? depth0.guesses : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"guesses","hash":{},"data":data}) : helper)))
     + "</td>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "<table class=\"score-main\">\n  <thead>\n    <tr>\n    <div class=\"row\">\n      <th class=\"small-5 columns\" width=\"200\">Player</th>\n      <th class=\"small-5 columns\" width=\"150\">Score</th>\n      </div>\n    </tr>\n  </thead>\n  <tbody>\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.user : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "  </tbody>\n</table>\n";
+  return "<table class=\"score-main row\">\n\n  <thead>\n    <tr>\n\n      <th class=\"small-5 columns\" width=\"200\">Player</th>\n      <th class=\"small-5 columns\" width=\"150\">Score</th>\n\n    </tr>\n  </thead>\n\n  <tbody>\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.guess : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "  </tbody>\n\n</table>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["submit"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
