@@ -1,18 +1,21 @@
-<table class="score-main">
+<table class="score-main row">
+
   <thead>
     <tr>
-    <div class="row">
+
       <th class="small-5 columns" width="200">Player</th>
       <th class="small-5 columns" width="150">Score</th>
-      </div>
+
     </tr>
   </thead>
+
   <tbody>
-    {{#each user}}
+    {{#each guess}}
     <tr>
 
-      <td>{{ user }}</td>
-      <td>{{ score }}</td>
+      <td>{{ username }}</td>
+      <td>{{ guesses }}</td>
     {{/each}}
   </tbody>
+
 </table>

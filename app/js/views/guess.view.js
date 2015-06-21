@@ -20,7 +20,7 @@
       this.collectionPosts = args.collectionPosts;
       this.collectionGuesses = args.collectionGuesses;
 
-      // this.collectionGuesses.fetch();
+      this.collectionGuesses.fetch();
       this.collectionPosts.fetch().success (function() {
         self.render();
       });

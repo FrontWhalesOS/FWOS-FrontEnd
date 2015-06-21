@@ -11,17 +11,19 @@
     initialize: function(options) {
 
       var args = options || {};
+      var self = this;
 
-      this.collectionUsers = args.collectionUsers;
+      this.collectionGuesses = args.collectionGuesses;
 
-      this.collectionUsers.fetch().success (function() {
+      console.log(this.collectionGuesses);
+      this.collectionGuesses.fetch().success (function() {
         self.render();
       });
+     $('.container').html(this.el);
     },
 
     render: function(){
-      this.$el.html(this.template({ user: this.collectionUsers.toJSON() }));
-
+      this.$el.html(this.template({ guess: this.collectionGuesses.toJSON() }));
     }
 
   });

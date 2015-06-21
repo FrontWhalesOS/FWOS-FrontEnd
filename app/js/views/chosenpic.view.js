@@ -49,7 +49,7 @@
     executeGuess: function(event) {
       var guess = $(event.target);
       var guess_id = $(event.target).attr('data-id');
-      var img_id = $('#random-image').attr('data-id');
+      var img_id = $('#chosen-image').attr('data-id');
 
       if (guess_id == img_id) {
         console.log('this is the one')
