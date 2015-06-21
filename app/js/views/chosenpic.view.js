@@ -31,16 +31,19 @@
 
 
     render: function(){
-      // this.$el.html(this.template({ post: this.collectionPosts.toJSON() }));
+
+      this.$el.html(this.template({ post: this.collectionPosts.toJSON() }));
       var singlePic = this.collectionPosts.get(this.singleId);
       this.$el.html(this.template(singlePic.toJSON()));
-      // var guesses = this.getRandomSet();
 
-      // this.$el.html(this.template({guesses : guesses}));
+      var guesses = this.getRandomSet(3);
+          guesses.push(singlePic);
+
+      this.$el.html(this.template({ post: singlePic, guesses : guesses}));
     },
 
-    getRandomSet: function() {
-      return this.collectionPosts.sample(4);
+    getRandomSet: function(x) {
+      return this.collectionPosts.sample(x);
     },
 
     executeGuess: function(event) {

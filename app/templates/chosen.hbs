@@ -1,12 +1,14 @@
 
 
 
+<div class="imgWrap">
+    <span class="userLabel"><i>posted&nbsp;by&nbsp;</i></span>
 
-<div class="guessImgWrap">
-  <span class="userLabel"><i>posted&nbsp;by&nbsp;</i>{{username}}</span>
+{{#each post }}
+  <span class="userLabelInline">{{ username }}</span>
   <img src="{{ image_url }}">
+{{/each}}
 </div>
-
 
 <main class = "guessContainer row">
 

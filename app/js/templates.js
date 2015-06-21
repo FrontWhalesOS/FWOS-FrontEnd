@@ -4,6 +4,14 @@ this["hbs"]["about"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"ma
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["chosen"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "  <span class=\"userLabelInline\">"
+    + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
+    + "</span>\n  <img src=\""
+    + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
+    + "\">\n";
+},"3":function(depth0,helpers,partials,data) {
     var stack1, alias1=this.lambda, alias2=this.escapeExpression;
 
   return "        <div class=\"guessBtnWrap\"><a href=\"#answer\" data-id=\""
@@ -12,14 +20,12 @@ this["hbs"]["chosen"] = Handlebars.template({"1":function(depth0,helpers,partial
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.attributes : depth0)) != null ? stack1.image_name : stack1), depth0))
     + "</a></div>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+    var stack1;
 
-  return "\n\n\n\n<div class=\"guessImgWrap\">\n  <span class=\"userLabel\"><i>posted&nbsp;by&nbsp;</i>"
-    + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
-    + "</span>\n  <img src=\""
-    + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
-    + "\">\n</div>\n\n\n<main class = \"guessContainer row\">\n\n  <h3>What's your guess?</h3>\n\n  <div class=\"small-12 columns guessWrap\">\n\n    <section>\n      <form>\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.guesses : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+  return "\n\n\n<div class=\"imgWrap\">\n    <span class=\"userLabel\"><i>posted&nbsp;by&nbsp;</i></span>\n\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.post : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "</div>\n\n<main class = \"guessContainer row\">\n\n  <h3>What's your guess?</h3>\n\n  <div class=\"small-12 columns guessWrap\">\n\n    <section>\n      <form>\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.guesses : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "      </form>\n    </section>\n\n  </div>\n\n</main>\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};

@@ -14,9 +14,9 @@
 
       this.collectionUsers = args.collectionUsers;
 
-      this.render();
-      $('.container').html(this.el);
-
+      this.collectionUsers.fetch().success (function() {
+        self.render();
+      });
     },
 
     render: function(){

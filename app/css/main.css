@@ -280,8 +280,7 @@ footer {
   width: 350px;
   height: 300px;
   border-radius: 4px;
-  border: solid 2px #F04124;
-  margin: 2em 0 2em 0; }
+  border: solid 2px #F04124; }
 
 .guessContainer {
   color: #FFFFFF;
@@ -317,13 +316,27 @@ footer {
   padding: 1em;
   font-size: 1.9em; }
 
-.guessImgWrap {
+.imgWrap {
   position: relative; }
-  .guessImgWrap .userLabel {
+  .imgWrap img {
+    border-radius: 4px;
+    margin-top: 1em;
+    margin-bottom: 1em; }
+  .imgWrap .userLabel {
     position: absolute;
     top: 0.5em;
     left: 0.5em;
     height: 0;
+    overflow: hidden;
     width: 100%;
     transition: height 0.9s ease;
-    opacity: 0.6; }
+    opacity: 0.6;
+    display: inline-block; }
+  .imgWrap .userLabelInline {
+    display: inline-block;
+    position: absolute;
+    top: 0.5em;
+    left: 82px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.9s ease; }
