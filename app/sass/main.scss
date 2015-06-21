@@ -176,7 +176,10 @@ body{
 
 
 }
+
+///
 //scoreboard styles
+///
  .score-main {
      margin-left: auto;
      margin-right: auto;
@@ -189,6 +192,10 @@ body{
      }
 
  }
+///
+///
+
+
 //
 //footer styles
 //
@@ -289,10 +296,10 @@ footer {
     border: solid 2px $headBorderRed;
     margin-top: 5em;
     border-radius: 8px;
-    overflow: hidden;
     height: 60em; //delete later;
     clear: both;
     float: left;
+    overflow: hidden;
 
     h3 {
       color: $pureWhite;
@@ -323,6 +330,43 @@ footer {
   }
 }
 
+.allDashImgWrap {
+  @include outer-container();
+  overflow: scroll;
+  text-overflow: scroll;
+  height: 100%;
+
+  .dashImgWrap {
+    @include span-columns(4);
+    @include omega(3n);
+    margin: 1em 0.35em 1em 0.4em;
+    position: relative;
+  }
+
+  .usernameOverlay {
+    position: absolute;
+    color: white;
+    left: 0.21em;
+    top: 0.21em;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: height 0.9s ease;
+
+    i{
+      color: $navGray;
+    }
+
+  }
+
+  .dashImg {
+    border-radius: 4px;
+  }
+
+  .dashImgWrap:hover .usernameOverlay {
+    height: 35px;
+  }
+}
 ///
 /// Guess.hbs page styling - many elements are taking on inherited styling from main.hbs
 ///

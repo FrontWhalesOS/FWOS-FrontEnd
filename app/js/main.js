@@ -34,6 +34,7 @@
     });
   });
 
+
   //handelbars helper to select item at random
   Handlebars.registerHelper('rand', function(guesses) {
 

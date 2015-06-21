@@ -191,10 +191,10 @@ footer {
     border: solid 2px #F04124;
     margin-top: 5em;
     border-radius: 8px;
-    overflow: hidden;
     height: 60em;
     clear: both;
-    float: left; }
+    float: left;
+    overflow: hidden; }
     .dashWrapper .mainPics:last-child {
       margin-right: 0; }
     .dashWrapper .mainPics h3 {
@@ -223,6 +223,46 @@ footer {
   .dashWrapper th {
     box-shadow: 1px -5px 2px 0px #333333;
     padding: 0.65em 5em 0.65em 1em; }
+
+.allDashImgWrap {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: scroll;
+  text-overflow: scroll;
+  height: 100%; }
+  .allDashImgWrap::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .allDashImgWrap .dashImgWrap {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin: 1em 0.35em 1em 0.4em;
+    position: relative; }
+    .allDashImgWrap .dashImgWrap:last-child {
+      margin-right: 0; }
+    .allDashImgWrap .dashImgWrap:nth-child(3n) {
+      margin-right: 0; }
+    .allDashImgWrap .dashImgWrap:nth-child(3n+1) {
+      clear: left; }
+  .allDashImgWrap .usernameOverlay {
+    position: absolute;
+    color: white;
+    left: 0.21em;
+    top: 0.21em;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: height 0.9s ease; }
+    .allDashImgWrap .usernameOverlay i {
+      color: #515151; }
+  .allDashImgWrap .dashImg {
+    border-radius: 4px; }
+  .allDashImgWrap .dashImgWrap:hover .usernameOverlay {
+    height: 35px; }
 
 .imgWrap {
   color: #FFFFFF;
