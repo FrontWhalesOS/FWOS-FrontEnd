@@ -52,11 +52,11 @@ this["hbs"]["guess"] = Handlebars.template({"1":function(depth0,helpers,partials
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "\n\n\n\n<div class=\"imgWrap\">\n"
+  return "\n\n<div class = row>\n\n<div class=\"imgWrap small-12 columns\">\n"
     + ((stack1 = (helpers.rand || (depth0 && depth0.rand) || helpers.helperMissing).call(depth0,(depth0 != null ? depth0.guesses : depth0),{"name":"rand","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "</div>\n\n\n<main class = \"guessContainer row\">\n\n  <h3>What's your guess?</h3>\n\n  <div class=\"small-12 columns guessWrap\">\n\n    <section>\n      <form>\n"
+    + "</div>\n\n\n<div class = \"guessContainer row\">\n\n  <h3>What's your guess?</h3>\n\n  <div class=\"small-12 columns guessWrap\">\n\n    <section>\n      <form>\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.guesses : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "      </form>\n    </section>\n\n  </div>\n\n</main>\n";
+    + "      </form>\n    </section>\n\n  </div>\n\n</div>\n\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["main"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
