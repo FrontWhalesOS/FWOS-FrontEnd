@@ -258,7 +258,8 @@ footer {
     overflow: hidden;
     transition: height 0.9s ease; }
     .allDashImgWrap .usernameOverlay i {
-      color: #515151; }
+      color: #515151;
+      opacity: 0.6; }
   .allDashImgWrap .dashImg {
     border-radius: 4px; }
   .allDashImgWrap .dashImgWrap:hover .usernameOverlay {

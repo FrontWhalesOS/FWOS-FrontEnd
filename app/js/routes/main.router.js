@@ -19,7 +19,6 @@
       'scores' : 'scoresPage',
       'about' : 'aboutPage',
       'guess' : 'guessPage',
-      'answer' : 'answerPage',
       ':user_name' : 'profilePage',
       ':user_name/photos' : 'userPhotos',
       '*path' : 'errorPage'
@@ -56,13 +55,6 @@
     guessPage: function(){
       new app.Views.Guess({
         collectionPosts: this.collectionPosts // will change to guesses
-      })
-    },
-
-    answerPage: function(){ //check collections
-      new app.Views.Answer({
-        collectionPosts: this.collectionPosts,
-        collectionUsers : this.collectionUsers
       })
     },
 

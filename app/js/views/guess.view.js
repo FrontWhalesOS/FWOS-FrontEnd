@@ -46,7 +46,8 @@
       var img_id = $('#random-image').attr('data-id');
 
       if (guess_id == img_id) {
-        console.log('YOU DONE DID IT');
+        console.log('this is the one')
+        $('.guessWrap').html(" ");
       };
     }
 
