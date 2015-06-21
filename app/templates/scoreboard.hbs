@@ -1,21 +1,20 @@
-<table class="score-main row">
 
+<div class="scoreboardMain row">
+  <table>
   <thead>
     <tr>
-
-      <th class="small-5 columns" width="200">Player</th>
-      <th class="small-5 columns" width="150">Score</th>
-
+      <th class="">Player</th>
+      <th class="">Score</th>
     </tr>
   </thead>
 
   <tbody>
     {{#each guess}}
     <tr>
-
       <td>{{ username }}</td>
       <td>{{ guesses }}</td>
+    </tr>
     {{/each}}
   </tbody>
-
-</table>
+  </table>
+</div>

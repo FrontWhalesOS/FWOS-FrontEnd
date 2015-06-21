@@ -115,15 +115,21 @@ body {
     border-radius: 4px;
     outline: none; }
 
-.score-main {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20%;
-  width: 60%; }
-  .score-main th {
+.scoreboardMain {
+  margin: 5em 5em 5em 5em;
+  border: solid 2px #F04124;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  border-radius: 8px;
+  overflow: scroll;
+  height: 220px; }
+  .scoreboardMain table {
+    width: 100%; }
+  .scoreboardMain thead {
     height: 50px;
-    color: #EE422E;
-    font-size: 20px; }
+    color: #515151;
+    font-size: 2em;
+    width: 100%; }
 
 footer {
   background-color: #333333;

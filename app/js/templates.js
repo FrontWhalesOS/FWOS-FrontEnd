@@ -45,17 +45,17 @@ this["hbs"]["dashboard"] = Handlebars.template({"1":function(depth0,helpers,part
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "      <tr>\n        <td>"
-    + alias3(((helper = (helper = helpers.user || (depth0 != null ? depth0.user : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user","hash":{},"data":data}) : helper)))
+    + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
     + "</td>\n        <td>"
-    + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</td>\n";
+    + alias3(((helper = (helper = helpers.guesses || (depth0 != null ? depth0.guesses : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"guesses","hash":{},"data":data}) : helper)))
+    + "</td>\n      <tr>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
   return "<div class=\"dashWrapper\" id=\"dash-wrapper\">\n\n  <ul class=\"mainPics\">\n\n    <h3>User Photos</h3>\n\n    <div class = \"allDashImgWrap\" id =\"all-dash-img-wrap\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.post : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "    </div>\n  </ul>\n\n\n  <table class=\"scoreDash\">\n    <thead>\n      <tr>\n        <th width=\"200\">Player</th>\n        <th width=\"150\">Score</th>\n      </tr>\n    </thead>\n    <tbody>\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.user : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.guess : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "    </tbody>\n  </table>\n\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
@@ -94,17 +94,17 @@ this["hbs"] = this["hbs"] || {};
 this["hbs"]["scoreboard"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "    <tr>\n\n      <td>"
+  return "    <tr>\n      <td>"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
     + "</td>\n      <td>"
     + alias3(((helper = (helper = helpers.guesses || (depth0 != null ? depth0.guesses : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"guesses","hash":{},"data":data}) : helper)))
-    + "</td>\n";
+    + "</td>\n    </tr>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "<table class=\"score-main row\">\n\n  <thead>\n    <tr>\n\n      <th class=\"small-5 columns\" width=\"200\">Player</th>\n      <th class=\"small-5 columns\" width=\"150\">Score</th>\n\n    </tr>\n  </thead>\n\n  <tbody>\n"
+  return "\n<div class=\"scoreboardMain row\">\n  <table>\n  <thead>\n    <tr>\n      <th class=\"\">Player</th>\n      <th class=\"\">Score</th>\n    </tr>\n  </thead>\n\n  <tbody>\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.guess : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "  </tbody>\n\n</table>\n";
+    + "  </tbody>\n  </table>\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["submit"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

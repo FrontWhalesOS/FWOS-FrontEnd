@@ -180,16 +180,26 @@ body{
 ///
 //scoreboard styles
 ///
- .score-main {
-     margin-left: auto;
-     margin-right: auto;
-     margin-top: 20%;
-     width: 60%;
-     th {
-         height: 50px;
-         color: #EE422E;
-         font-size: 20px;
-     }
+ .scoreboardMain {
+  margin: 5em 5em 5em 5em;
+  // text-shadow: 1px 1px 3px $hoverBlack;
+  border: solid 2px $headBorderRed;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  border-radius: 8px;
+  overflow: scroll;
+  height: 220px;
+
+  table {
+    width: 100%;
+  }
+
+  thead {
+    height: 50px;
+    color: $navGray;
+    font-size: 2em;
+    width: 100%
+  }
 
  }
 ///
