@@ -58,7 +58,7 @@ body {
     position: absolute;
     color: #FFFFFF;
     left: 0em;
-    bottom: -64px;
+    bottom: -113px;
     font-weight: lighter;
     background-color: #333333;
     padding: 15px 22.5px 11px 22.5px;
@@ -66,6 +66,19 @@ body {
     display: none;
     border-bottom-right-radius: 4px; }
   .dropDown .logoutBox:hover {
+    background-color: #000101; }
+  .dropDown .userBox {
+    position: absolute;
+    color: #FFFFFF;
+    left: 0em;
+    bottom: -64px;
+    font-weight: lighter;
+    background-color: #333333;
+    padding: 14px 11.5px 12px 10.5px;
+    font-size: 1em;
+    display: none;
+    border-bottom-right-radius: 4px; }
+  .dropDown .userBox:hover {
     background-color: #000101; }
 
 .front {
