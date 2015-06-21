@@ -65,7 +65,7 @@ $('#logout-box').on('click', function(){
       Cookies.expire('access_token');
       Cookies.expire('username');
       Cookies.expire('id');
-      $('#username-link').text('SignIn');
+      $('#this-user').text('SignIn');
 });
 
 }());

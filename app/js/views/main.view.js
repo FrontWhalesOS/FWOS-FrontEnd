@@ -111,7 +111,7 @@
         app.MainRouter.navigate('dashboard', { trigger: true });
         console.log(app.User);
       });
-    $('#username-link').text(loginUserName);
+    $('#this-user').text(loginUserName);
     // var cookie = Cookies.get('access_token', app.LoggedInUser.access_token);
 
 
