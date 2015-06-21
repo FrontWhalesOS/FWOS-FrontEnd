@@ -20,6 +20,7 @@
       'about' : 'aboutPage',
       'guess' : 'guessPage',
       'answer' : 'answerPage',
+      'pic/:id' : 'chosenPic',
       ':user_name' : 'profilePage',
       ':user_name/photos' : 'userPhotos',
       '*path' : 'errorPage'
@@ -63,6 +64,13 @@
       new app.Views.Answer({
         collectionPosts: this.collectionPosts,
         collectionUsers : this.collectionUsers
+      })
+    },
+    chosenPic: function(id){
+
+      new app.Views.ChosenPic({
+        singleId: id,
+        collectionPosts: this.collectionPosts
       })
     },
 

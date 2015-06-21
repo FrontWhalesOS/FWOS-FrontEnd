@@ -2,6 +2,7 @@
 
  'use strict';
 
+
  app.Views.Main = Backbone.View.extend({
 
    className: "main",
@@ -22,19 +23,21 @@
      var args = options || {};
 
      this.collectionUsers = args.collectionUsers;
-
-
-     this.render();
-     $('.container').html(this.el);
-      //     app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
+      //    app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
       // if (app.isLoggedIn) {
       //   app.MainRouter.navigate('dashboard', { trigger: true });
       // } else {
       //   app.MainRouter.navigate('', { trigger: true });
       // }
+
+
+     this.render();
+     $('.container').html(this.el);
+
    },
 
    render: function(){
+
      this.$el.html(this.template)
   },
 

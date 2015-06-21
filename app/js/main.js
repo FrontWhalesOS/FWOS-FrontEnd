@@ -2,6 +2,7 @@
 
   'use strict';
 
+
   $.ajaxSetup({
 
     headers: {
@@ -47,5 +48,6 @@
 
   return output + ">";
 });
+
 
 }());
