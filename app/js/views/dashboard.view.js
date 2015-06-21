@@ -15,6 +15,7 @@
 
       this.collectionUsers = args.collectionUsers;
       this.collectionPosts = args.collectionPosts;
+      console.log(this.collectionPosts);
 
       this.collectionPosts.fetch().success( function() {
         self.render();
