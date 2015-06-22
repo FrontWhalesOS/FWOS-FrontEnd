@@ -1,0 +1,6 @@
+{
+  "name": "group-project1-fe",
+  "root": "app",
+  "clean_urls": true,
+  "error_page": "error.html"
+}
