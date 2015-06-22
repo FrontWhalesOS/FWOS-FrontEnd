@@ -56,19 +56,12 @@
                                 "<a class='connectInput small-9 columns button alert' href='#guess' onClick='window.location.reload(true);'>Try once more</a>");
         $('#guess-response').fadeIn(1500);
 
-        this.collectionGuesses.fetch().success(function() {
-          var self = this;
-         _.detect(self.collectionGuesses, function() {
+        // this.collectionGuesses.fetch().success(function() {
 
-           if (self.username == user) {
+        // _.filter(this.models.attributes.username, function() {
+        //   })
 
-           } else {
-
-             console.log("on the right track");
-
-           }
-         })
-       });
+        // });
 
       } else if (guess_id !== img_id){
         $('.guessWrap').html("");
