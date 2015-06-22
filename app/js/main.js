@@ -38,11 +38,12 @@
 
   $('#username-link').on('mouseenter', function() {
     $('#logout-box').fadeIn(250);
-    $('#logout-box').on('mouseleave', function() {
+    $('#user-box').fadeIn(250);
+    $('#username-link').on('mouseleave', function() {
       $('#logout-box').fadeOut(250);
+      $('#user-box').fadeOut(250);
     });
   });
-
 
   //handelbars helper to select item at random
   Handlebars.registerHelper('rand', function(guesses) {
@@ -64,7 +65,7 @@ $('#logout-box').on('click', function(){
       Cookies.expire('access_token');
       Cookies.expire('username');
       Cookies.expire('id');
-      $('#username-link').text('SignIn');
+      $('#this-user').text('SignIn');
 });
 
 }());

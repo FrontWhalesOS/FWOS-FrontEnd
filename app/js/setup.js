@@ -18,6 +18,6 @@
   //   }
   // });
     var cookie = Cookies.get('username');
-    $('#username-link').text(cookie);
+    $('#this-user').text(cookie);
 
 }());
