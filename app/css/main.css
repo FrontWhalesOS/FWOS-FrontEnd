@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   box-sizing: border-box; }
 
@@ -80,6 +81,15 @@ body {
     border-bottom-right-radius: 4px; }
   .dropDown .userBox:hover {
     background-color: #000101; }
+
+.userLink {
+  width: 95px; }
+
+.userLink::after {
+  color: #FFFFFF;
+  content: '▾';
+  font-size: smaller;
+  margin-left: 0.7em; }
 
 .front {
   color: #FFFFFF;
@@ -249,7 +259,8 @@ footer {
   margin-right: auto;
   overflow: scroll;
   text-overflow: scroll;
-  height: 100%; }
+  height: 100%;
+  padding-bottom: 5em; }
   .allDashImgWrap::after {
     clear: both;
     content: "";
@@ -260,7 +271,10 @@ footer {
     margin-right: 2.35765%;
     width: 31.76157%;
     margin: 1em 0.35em 1em 0.4em;
-    position: relative; }
+    position: relative;
+    height: 210px;
+    overflow: scroll;
+    vertical-align: center; }
     .allDashImgWrap .dashImgWrap:last-child {
       margin-right: 0; }
     .allDashImgWrap .dashImgWrap:nth-child(3n) {

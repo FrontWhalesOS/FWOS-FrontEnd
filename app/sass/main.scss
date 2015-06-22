@@ -111,6 +111,17 @@ body{
   }
 }
 
+.userLink {
+  width: 95px;
+}
+
+.userLink::after {
+  color: $pureWhite;
+  content: '▾';
+  font-size: smaller;
+  margin-left: 0.7em;
+}
+
 //
 //
 //
@@ -360,12 +371,16 @@ footer {
   overflow: scroll;
   text-overflow: scroll;
   height: 100%;
+  padding-bottom: 5em;
 
   .dashImgWrap {
     @include span-columns(4);
     @include omega(3n);
     margin: 1em 0.35em 1em 0.4em;
     position: relative;
+    height: 210px;
+    overflow: scroll;
+    vertical-align: center;
   }
 
   .usernameOverlay {
