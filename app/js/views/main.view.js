@@ -99,8 +99,9 @@
           username: loginUserName,
           password: loginPwd
         };
-    $.post(myendpoint, loginInfo).success( function (data){
+    $.post(myendpoint + 'login', loginInfo).success( function (data){
         Cookies.set('access_token', data.user.access_token);
+        Cookies.set('id', data.user.id);
         Cookies.set('username', data.user.username);
         app.User = data;
         // $.ajaxSetup({
@@ -109,12 +110,14 @@
         //   }
         // });
         app.MainRouter.navigate('dashboard', { trigger: true });
-        console.log(app.User);
+
       });
-    $('#this-user').text(loginUserName);
-    // var cookie = Cookies.get('access_token', app.LoggedInUser.access_token);
+  //   var userid = Cookies.get('id'),
+  //    userName = Cookies.get('username'),
+  // userstuff = loginUserName + '<a href="/#" class="logoutBox" id="logout-box">Log&nbsp;out</a><a href="/#user/' + userid + '" class="userBox" id="user-box">View&nbsp;Profile</a>';
+  //   $('#this-user').html(userstuff);
 
-
+  $('#this-user').html(loginUserName);
 
 
    },

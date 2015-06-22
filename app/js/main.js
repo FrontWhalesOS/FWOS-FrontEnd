@@ -29,7 +29,6 @@
       collectionPosts : allPosts,
       collectionGuesses: allGuesses
     });
-
     Backbone.history.start();
 
   });
