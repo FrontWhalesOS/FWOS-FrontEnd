@@ -57,11 +57,15 @@
         $('#guess-response').fadeIn(1500);
 
         this.collectionGuesses.fetch().success(function() {
+          var self = this;
          _.detect(self.collectionGuesses, function() {
+
            if (self.username == user) {
-             console.log("LOGGED IN FOUND");
+
            } else {
+
              console.log("on the right track");
+
            }
          })
        });
