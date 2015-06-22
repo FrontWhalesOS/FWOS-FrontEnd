@@ -117,7 +117,7 @@
   // userstuff = loginUserName + '<a href="/#" class="logoutBox" id="logout-box">Log&nbsp;out</a><a href="/#user/' + userid + '" class="userBox" id="user-box">View&nbsp;Profile</a>';
   //   $('#this-user').html(userstuff);
 
-  $('#this-user').html(loginUserName);
+      $('#this-user').html(loginUserName);
 
 
    },

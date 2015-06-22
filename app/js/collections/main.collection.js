@@ -29,7 +29,7 @@
 
     model: app.Models.Guess,
 
-    comparator: 'guesses',
+    comparator: '-guesses',
 
     url: thirdendpoint
   });
