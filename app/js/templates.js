@@ -112,5 +112,9 @@ this["hbs"]["submit"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"m
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["user"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "";
+    var helper;
+
+  return "<div class=\"row\">\n  <h3>"
+    + this.escapeExpression(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
+    + "</h3>\n</div>\n";
 },"useData":true});

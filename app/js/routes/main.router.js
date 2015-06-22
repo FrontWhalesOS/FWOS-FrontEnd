@@ -23,7 +23,7 @@
       'guess' : 'guessPage',
       'answer' : 'answerPage',
       'pic/:id' : 'chosenPic',
-      ':user_name' : 'profilePage',
+      'user/:id' : 'profilePage',
       ':user_name/photos' : 'userPhotos',
       '*path' : 'errorPage'
 
@@ -75,8 +75,10 @@
 
     profilePage: function(){
       new app.Views.User({
+        // user: username,
 
         collectionUsers: this.collectionUsers
+        // collectionPosts: this.collectionPosts
 
       });
 
