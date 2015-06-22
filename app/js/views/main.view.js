@@ -80,7 +80,7 @@
      //add instance to collection and push to database
      this.collectionUsers.add(u)
 
-     $.post('https://morning-sands-1943.herokuapp.com/users/register', u.toJSON()).success( function (data) {
+     $.post(myendpoint, u.toJSON()).success( function (data) {
       self.render();
 
 
@@ -99,7 +99,7 @@
           username: loginUserName,
           password: loginPwd
         };
-    $.post('https://morning-sands-1943.herokuapp.com/users/login', loginInfo).success( function (data){
+    $.post(myendpoint, loginInfo).success( function (data){
         Cookies.set('access_token', data.user.access_token);
         Cookies.set('username', data.user.username);
         app.User = data;
