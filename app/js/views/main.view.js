@@ -80,7 +80,7 @@
      //add instance to collection and push to database
      this.collectionUsers.add(u)
 
-     $.post(myendpoint, u.toJSON()).success( function (data) {
+     $.post(myendpoint + 'register', u.toJSON()).success( function (data) {
       self.render();
 
 
