@@ -56,12 +56,14 @@
                                 "<a class='connectInput small-9 columns button alert' href='#guess' onClick='window.location.reload(true);'>Try once more</a>");
         $('#guess-response').fadeIn(1500);
 
-        // this.collectionGuesses.fetch().success(function() {
-
-        // _.filter(this.models.attributes.username, function() {
-        //   })
-
-        // });
+        this.collectionGuesses.fetch().success(function(data) {
+        _.filter(data, function(inner) {
+          if (inner.username == user) {
+            inner.guesses += 1;
+            $.post(thirdendpoint, inner.guesses);
+          }
+          });
+        });
 
       } else if (guess_id !== img_id){
         $('.guessWrap').html("");
@@ -69,6 +71,7 @@
                                "<a class='connectInput small-9 columns button alert' href='#guess' onClick='window.location.reload(true);'>Try once more</a>");
         $('#guess-response').fadeIn(1500);
       }
+
 
     }
 
